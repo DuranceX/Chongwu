@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">宠悟</string>
+    <string name="edit_Message">Enter a message</string>
+    <string name="button_send">Send</string>
+</resources>
