@@ -1,10 +1,13 @@
 package com.example.first_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button2 = (Button) findViewById(R.id.button2);
+        Button button2 =findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             //@description 为开始学习按钮创建一个点击就会收到的Toast
@@ -46,4 +49,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * @description  显示主菜单
+     * @param menu
+     * @return boolean
+     * @author Lu Ning
+     * @time 2020/11/10 21:38
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+    }
+
+
+
+    /**
+     * @description 菜单选项被点击后的具体活动
+     * @param
+     * @return boolean
+     * @author Lu Ning
+     * @time 2020/11/10 21:45
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.name:
+                Toast.makeText(this, "你按下了宠悟", Toast.LENGTH_SHORT).show();
+            case R.id.about_us:
+                Toast.makeText(this, "你想了解我们的情况", Toast.LENGTH_SHORT).show();
+            case R.id.item:
+                Toast.makeText(this, "其实啥都没有", Toast.LENGTH_SHORT).show();
+            default:
+        }
+        return true;
+    }
 }
