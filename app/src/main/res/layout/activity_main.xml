@@ -45,6 +45,7 @@
         android:layout_marginBottom="22dp"
         android:alpha="90"
         android:background="@color/colorPrimary"
+        android:onClick="clickLearn"
         android:text="@string/start_study"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

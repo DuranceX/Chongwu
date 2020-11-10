@@ -12,7 +12,7 @@ x5：Cardy<br />
 卢：luhundun<br />
 再合并到dev中<br />
 
-##命名规范
+## 命名规范
 /**
  * @description $desc$
  * @param $methodParameters$

@@ -20,13 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button2 =findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            //@description 为开始学习按钮创建一个点击就会收到的Toast
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "你还不能学习哦", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     protected void onPause()
@@ -46,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity","点击了发送消息按钮");          //日志
         intent.putExtra(EXTRA_MESSAGE,message);
         startActivity(intent);
+    }
+
+    /**
+     * @description 点击“开始学习”按钮触发此事件
+     * @param view
+     * @return boolean
+     * @author Cardy Xie
+     * @time 2020/11/10 22:55
+     */
+    public void clickLearn(View view)
+    {
+        Toast.makeText(MainActivity.this, "你还不能学习哦", Toast.LENGTH_SHORT).show();
     }
 
 
