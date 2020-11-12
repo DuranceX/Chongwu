@@ -14,9 +14,9 @@ x5：Cardy<br />
 
 ## 命名规范
 /**
- * @description $desc$
- * @param $methodParameters$
- * @return $methodReturnType$
- * @author $user$
- * @time $date$ $time$
- */
+/* @description $desc$
+/* @param $methodParameters$
+/* @return $methodReturnType$
+/* @author $user$
+/* @time $date$ $time$
+*/

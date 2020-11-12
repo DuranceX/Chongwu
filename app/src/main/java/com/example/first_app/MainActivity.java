@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.chongwu.util.DbUtil;
+
 public class MainActivity extends AppCompatActivity {
     public  static final String EXTRA_MESSAGE = "com.example.first_app.MESSAGE";
     @Override
@@ -20,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button2 =findViewById(R.id.button2);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                DbUtil.getConnection();
+            }
+        }).start();
     }
 
     protected void onPause()
