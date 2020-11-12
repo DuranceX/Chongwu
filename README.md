@@ -13,10 +13,10 @@ x5：Cardy<br />
 再合并到dev中<br />
 
 ## 命名规范
-/**
-/* @description $desc$
-/* @param $methodParameters$
-/* @return $methodReturnType$
-/* @author $user$
-/* @time $date$ $time$
-*/
+/**<br />
+/* @description $desc$<br />
+/* @param $methodParameters$<br />
+/* @return $methodReturnType$<br />
+/* @author $user$<br />
+/* @time $date$ $time$<br />
+*/<br />
