@@ -27,11 +27,12 @@ public class DbUtil {
             conn = DriverManager.getConnection(databaseURL,username, password);
             Log.d("DBConnection","数据库连接成功！！！");
             //3.sql语句
-            String sql = "INSERT INTO test Values('test','balala');";
+            String sql = "INSERT INTO test Values('test3','hhhhh');";
 //            String sql = "INSERT INTO test('123','456');";
             //4.获取用于向数据库发送sql语句的ps
             PreparedStatement ps=conn.prepareStatement(sql);
             ps.execute(sql);
+            Log.d("DBconnection","数据插入成功");
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             Log.d("DBConnection","数据库连接失败");

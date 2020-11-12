@@ -22,12 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button2 =findViewById(R.id.button2);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                DbUtil.getConnection();
-            }
-        }).start();
     }
 
     protected void onPause()
@@ -37,7 +31,17 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity","修改了文本");
         editText.setHint("Welcome back");
     }
-    
+
+    public void dbtest(View view)
+    {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                DbUtil.getConnection();
+            }
+        }).start();
+    }
+
 
     public void SendMessage(View view)
     {
