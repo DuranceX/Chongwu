@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.chongwu.bean.User;
 import com.chongwu.dao.UserDao;
 import com.chongwu.util.DbUtil;
+import com.example.first_app.ui.login.LoginActivity;
 
 import java.sql.SQLException;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     {
         super.onPause();
         EditText editText = findViewById(R.id.editText);
-        Log.d("MainActivity","修改了文本");
+        Log.d("MainActivity","主页活动暂停");
         editText.setHint("Welcome back");
     }
 
@@ -76,6 +77,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * @description 从任何地方跳转到登陆页面
+     * @param view
+     * @return null
+     * @author Lu Ning
+     * @time 2020/11/13 16:22
+     */
+    public void SignInAccount(View view){
+        Intent intent = new Intent(this, LoginActivity.class);
+        Log.d("MainActivity","跳转至登陆页面");
+        startActivity(intent);
+    }
+
+
+    /**
      * @description 点击“开始学习”按钮触发此事件
      * @param view
      * @return boolean
@@ -117,8 +132,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "你按下了宠悟", Toast.LENGTH_SHORT).show();
             case R.id.about_us:
                 Toast.makeText(this, "你想了解我们的情况", Toast.LENGTH_SHORT).show();
-            case R.id.item:
-                Toast.makeText(this, "其实啥都没有", Toast.LENGTH_SHORT).show();
+            case R.id.sign_in:
+                SignInAccount(null);
             default:
         }
         return true;

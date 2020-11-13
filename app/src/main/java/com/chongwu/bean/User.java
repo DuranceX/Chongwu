@@ -6,27 +6,27 @@ package com.chongwu.bean;
  * @time 2020/11/13 10:49
  */
 public class User {
-    String id;
-    String psw;
+    private String userID;
+    private String userPassword;
 
-    public String getId() {
-        return id;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
-    public String getPsw() {
-        return psw;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setPsw(String psw) {
-        this.psw = psw;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     public String toString()
     {
-        return "user[ id=" + this.id + " psw=" + this.psw + " ]";
+        return "user[ id=" + this.userID + " psw=" + this.userPassword + " ]";
     }
 }

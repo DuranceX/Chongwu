@@ -7,10 +7,12 @@
         android:title="@string/app_name" />
 
     <item
+        android:id="@+id/sign_in"
+        android:title="登陆" />
+
+    <item
         android:id="@+id/about_us"
         android:icon="@mipmap/ic_launcher"
         android:title="@string/about_us" />
-    <item
-        android:id="@+id/item"
-        android:title="Item" />
+
 </menu>

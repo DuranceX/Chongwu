@@ -10,7 +10,7 @@ com<br />
 ## 推送
 推至各自的分支<br />
 x5：Cardy<br />
-卢：luhundun<br />
+卢：LuBranch<br />
 再合并到dev中<br />
 
 ## 命名规范
