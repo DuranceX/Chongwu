@@ -13,7 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.chongwu.bean.User;
+import com.chongwu.dao.UserDao;
 import com.chongwu.util.DbUtil;
+
+import java.sql.SQLException;
 
 public class MainActivity extends AppCompatActivity {
     public  static final String EXTRA_MESSAGE = "com.example.first_app.MESSAGE";
@@ -32,17 +36,35 @@ public class MainActivity extends AppCompatActivity {
         editText.setHint("Welcome back");
     }
 
+    /**
+     * @description 测试连接数据库，使用UserDao对象的selectUser()方法
+     * @param view
+     * @return null
+     * @author Cardy Xie
+     * @time 2020/11/13 10:48
+     */
     public void dbtest(View view)
     {
+        UserDao userDao = new UserDao();
         new Thread(new Runnable() {
             @Override
             public void run() {
-                DbUtil.getConnection();
+                try {
+                    userDao.selectUser();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }).start();
     }
 
-
+    /**
+     * @description 发送消息示例，用于不同Activity间跳转及信息通信
+     * @param view
+     * @return null
+     * @author Cardy Xie
+     * @time 2020/11/13 10:46
+     */
     public void SendMessage(View view)
     {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
