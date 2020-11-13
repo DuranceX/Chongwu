@@ -1,20 +1,20 @@
 package com.chongwu.bean;
 
 /**
- * @descripution 用户类
+ * @descripution 用户登录类
  * @author Cardy Xie
  * @time 2020/11/13 10:49
  */
 public class User {
-    private String userID;
+    private String userId;
     private String userPassword;
 
-    public String getUserID() {
-        return userID;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUserPassword() {
@@ -25,8 +25,20 @@ public class User {
         this.userPassword = userPassword;
     }
 
-    public String toString()
-    {
-        return "user[ id=" + this.userID + " psw=" + this.userPassword + " ]";
+    public User() {
     }
+
+    public User(String userId) {
+        this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                '}';
+    }
+
+
 }

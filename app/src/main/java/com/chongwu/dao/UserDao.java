@@ -26,7 +26,7 @@ public class UserDao {
         User user = new User();
         if(rs.next())
         {
-            user.setUserID(rs.getString(1));
+            user.setUserId(rs.getString(1));
             user.setUserPassword(rs.getString(2));
         }
         Log.d("DBconnection Result", user.toString());

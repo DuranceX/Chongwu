@@ -1,4 +1,4 @@
-package com.example.first_app.data;
+package com.chongwu.bean.loginData;
 
 /**
  * A generic class that holds a result success w/ data or an error exception.

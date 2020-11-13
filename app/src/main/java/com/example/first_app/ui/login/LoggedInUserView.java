@@ -4,14 +4,14 @@ package com.example.first_app.ui.login;
  * Class exposing authenticated user details to the UI.
  */
 class LoggedInUserView {
-    private String displayName;
+    private String userId;
     //... other data fields that may be accessible to the UI
 
-    LoggedInUserView(String displayName) {
-        this.displayName = displayName;
+    LoggedInUserView(String userId) {
+        this.userId = userId;
     }
 
-    String getDisplayName() {
-        return displayName;
+    String getDUserId() {
+        return userId;
     }
 }
