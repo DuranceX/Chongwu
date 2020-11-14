@@ -1,4 +1,4 @@
-package com.example.first_app.ui.login;
+package com.example.first_app.ui.loginActivity;
 
 import android.app.Activity;
 
@@ -23,20 +23,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.first_app.R;
-import com.example.first_app.ui.login.LoginViewModel;
-import com.example.first_app.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
 
     @Override
+    /**
+     * @description 进入登陆页面后的事件
+     * @param [savedInstanceState]
+     * @return void
+     * @author Lu Ning
+     * @time 2020/11/14 13:02
+     */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
-
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
@@ -78,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
+        //配合监听用户是否输入的,后续可以学
         TextWatcher afterTextChangedListener = new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -110,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //按键触发登陆
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,12 +125,26 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * @description 用户登录成功后触发的事件
+     * @param   model 用户视角的一个对象
+     * @return 
+     * @author Lu Ning
+     * @time 2020/11/14 12:43
+     */
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDUserId();
-        // TODO : initiate successful logged in experience
+        // 这里可以补充用户登录后干啥
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 
+    /**
+     * @description 用户登录失败后触发的事件
+     * @param
+     * @return
+     * @author Lu Ning
+     * @time 2020/11/14 13:01
+     */
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }

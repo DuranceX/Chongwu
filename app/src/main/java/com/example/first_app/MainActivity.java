@@ -13,10 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.chongwu.bean.User;
 import com.chongwu.dao.UserDao;
-import com.chongwu.util.DbUtil;
-import com.example.first_app.ui.login.LoginActivity;
+import com.example.first_app.ui.loginActivity.LoginActivity;
 
 import java.sql.SQLException;
 
