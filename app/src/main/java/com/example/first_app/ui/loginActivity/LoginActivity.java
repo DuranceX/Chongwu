@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //关键部分，获取是否登陆成功。
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
             public void onChanged(@Nullable LoginResult loginResult) {

@@ -52,6 +52,14 @@ public class LoginViewModel extends ViewModel {
     }
 
     // A placeholder username validation check
+
+    /**
+     * @description 实时检查用户名是否有效
+     * @param
+     * @return
+     * @author Lu Ning
+     * @time 2020/11/14 13:39
+     */
     private boolean isUserNameValid(String username) {
         if (username == null) {
             return false;
@@ -64,6 +72,13 @@ public class LoginViewModel extends ViewModel {
     }
 
     // A placeholder password validation check
+    /**
+     * @description 密码是否有效？，但是这有毛用？
+     * @param   password
+     * @return
+     * @author Lu Ning
+     * @time 2020/11/14 13:40
+     */
     private boolean isPasswordValid(String password) {
         return password != null && password.trim().length() > 5;
     }
