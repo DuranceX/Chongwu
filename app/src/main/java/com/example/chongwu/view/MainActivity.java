@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.example.chongwu.R;
 import com.example.chongwu.dao.UserDao;
-import com.example.chongwu.loginActivity.LoginActivity;
+import com.example.chongwu.util.MainMenuUtil;
 
 import java.sql.SQLException;
 
@@ -82,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
      * @author Lu Ning
      * @time 2020/11/13 16:22
      */
-    public void SignInAccount(View view){
-        Intent intent = new Intent(this, LoginActivity.class);
-        Log.d("MainActivity","跳转至登陆页面");
-        startActivity(intent);
-    }
+//    public void SignInAccount(View view){
+//        Intent intent = new Intent(this, LoginActivity.class);
+//        Log.d("MainActivity","跳转至登陆页面");
+//        startActivity(intent);
+//    }  暂时不删除，此函数已经写到Util类了
 
 
     /**
@@ -111,12 +111,9 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main,menu);
+        getMenuInflater().inflate(R.menu.main_menu,menu);
         return true;
     }
-
-
-
     /**
      * @description 菜单选项被点击后的具体活动
      * @param
@@ -127,12 +124,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.name:
-                Toast.makeText(this, "你按下了宠悟", Toast.LENGTH_SHORT).show();
+            case R.id.main:
+                MainMenuUtil.backToMainActivity(this,null);
+                break;
+            case R.id.shop:
+                MainMenuUtil.openShop(this,null);
+                break;
+            case R.id.setting:
+                MainMenuUtil.openSetting(this,null);
+                break;
             case R.id.about_us:
                 Toast.makeText(this, "你想了解我们的情况", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.sign_in:
-                SignInAccount(null);
+                MainMenuUtil.signInAccount(this,null);  //调用自util
+                break;
             default:
         }
         return true;

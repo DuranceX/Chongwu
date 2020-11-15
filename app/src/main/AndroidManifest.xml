@@ -16,19 +16,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.example.chongwu.view.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:name=".view.ShopActivity"
+            android:label="@string/title_activity_shop"></activity>
         <activity
-            android:name="com.example.chongwu.loginActivity.LoginActivity"
+            android:name=".view.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".loginActivity.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
-            android:name="com.example.chongwu.view.DisplayMessageActivity"
-            android:parentActivityName="com.example.chongwu.view.MainActivity">
+            android:name=".view.DisplayMessageActivity"
+            android:launchMode="singleTask"
+            android:parentActivityName=".view.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.chongwu.view.MainActivity" />
         </activity>
-        <activity android:name="com.example.chongwu.view.MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
