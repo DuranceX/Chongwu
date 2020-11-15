@@ -1,4 +1,4 @@
-package com.chongwu.bean.loginData;
+package com.example.chongwu.bean.loginData;
 
 /**
  * A generic class that holds a result success w/ data or an error exception.

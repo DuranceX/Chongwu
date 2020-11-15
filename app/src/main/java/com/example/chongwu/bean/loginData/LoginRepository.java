@@ -1,6 +1,7 @@
-package com.chongwu.bean.loginData;
+package com.example.chongwu.bean.loginData;
 
-import com.chongwu.bean.User;
+import com.example.chongwu.bean.User;
+
 /**
  * Class that requests authentication and user information from the remote data source and
  * maintains an in-memory cache of login status and user credentials information.

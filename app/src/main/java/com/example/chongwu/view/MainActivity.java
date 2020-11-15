@@ -1,4 +1,4 @@
-package com.example.first_app;
+package com.example.chongwu.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.chongwu.dao.UserDao;
-import com.example.first_app.ui.loginActivity.LoginActivity;
+import com.example.chongwu.R;
+import com.example.chongwu.dao.UserDao;
+import com.example.chongwu.loginActivity.LoginActivity;
 
 import java.sql.SQLException;
 

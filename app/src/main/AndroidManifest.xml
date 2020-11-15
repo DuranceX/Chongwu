@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.first_app">
+    package="com.example.chongwu">
 
     <uses-permission
         android:name="android.permission.INTERNET"
@@ -15,18 +15,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivityOurs"></activity>
         <activity
-            android:name=".ui.loginActivity.LoginActivity"
+            android:name="com.example.chongwu.view.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity
+            android:name="com.example.chongwu.loginActivity.LoginActivity"
             android:label="@string/title_activity_login" />
         <activity
-            android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="com.example.chongwu.view.DisplayMessageActivity"
+            android:parentActivityName="com.example.chongwu.view.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.chongwu.view.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.chongwu.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

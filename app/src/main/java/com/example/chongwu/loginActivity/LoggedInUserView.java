@@ -1,4 +1,4 @@
-package com.example.first_app.ui.loginActivity;
+package com.example.chongwu.loginActivity;
 
 /**
  * Class exposing authenticated user details to the UI.

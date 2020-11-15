@@ -1,4 +1,4 @@
-package com.example.first_app.ui.loginActivity;
+package com.example.chongwu.loginActivity;
 
 import androidx.annotation.Nullable;
 

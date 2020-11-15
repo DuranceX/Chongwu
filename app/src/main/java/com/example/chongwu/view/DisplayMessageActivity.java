@@ -1,10 +1,12 @@
-package com.example.first_app;
+package com.example.chongwu.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.chongwu.R;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.first_app.ui.loginActivity;
+package com.example.chongwu.loginActivity;
 
 import android.app.Activity;
 
@@ -22,7 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.first_app.R;
+import com.example.chongwu.R;
 
 public class LoginActivity extends AppCompatActivity {
 

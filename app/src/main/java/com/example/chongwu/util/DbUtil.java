@@ -1,4 +1,4 @@
-package com.chongwu.util;
+package com.example.chongwu.util;
 
 import android.util.Log;
 

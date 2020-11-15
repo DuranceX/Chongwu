@@ -1,4 +1,4 @@
-package com.example.first_app;
+package com.example.chongwu;
 
 import org.junit.Test;
 

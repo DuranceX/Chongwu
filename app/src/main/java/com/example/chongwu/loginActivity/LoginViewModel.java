@@ -1,4 +1,4 @@
-package com.example.first_app.ui.loginActivity;
+package com.example.chongwu.loginActivity;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel;
 
 import android.util.Patterns;
 
-import com.chongwu.bean.loginData.LoginRepository;
-import com.chongwu.bean.loginData.Result;
-import com.chongwu.bean.User;
-import com.example.first_app.R;
+import com.example.chongwu.bean.loginData.LoginRepository;
+import com.example.chongwu.bean.loginData.Result;
+import com.example.chongwu.bean.User;
+import com.example.chongwu.R;
 
 public class LoginViewModel extends ViewModel {
 

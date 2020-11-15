@@ -1,9 +1,9 @@
-package com.chongwu.dao;
+package com.example.chongwu.dao;
 
 import android.util.Log;
 
-import com.chongwu.bean.User;
-import com.chongwu.util.DbUtil;
+import com.example.chongwu.bean.User;
+import com.example.chongwu.util.DbUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

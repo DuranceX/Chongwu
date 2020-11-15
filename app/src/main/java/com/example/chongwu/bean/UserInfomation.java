@@ -1,4 +1,4 @@
-package com.chongwu.bean;
+package com.example.chongwu.bean;
 
 /**
  * @description 用户信息类
