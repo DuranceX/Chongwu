@@ -10,6 +10,34 @@ package com.example.chongwu.bean;
 public class UserInfomation {
     private String userID;
     private String userName;
+    private int driedFish;   //小鱼干数目
+    private String userSchool;
+    private String userSex;
+
+    public int getDriedFish() {
+        return driedFish;
+    }
+
+    public void setDriedFish(int driedFish) {
+        this.driedFish = driedFish;
+    }
+
+    public String getUserSchool() {
+        return userSchool;
+    }
+
+    public void setUserSchool(String userSchool) {
+        this.userSchool = userSchool;
+    }
+
+    public String getUserSex() {
+        return userSex;
+    }
+
+    public void setUserSex(String userSex) {
+        this.userSex = userSex;
+    }
+
     //后面一些必要的用户信息如性别等等数据库设计后再完善。
 
     public String getUserID() {

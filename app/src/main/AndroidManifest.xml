@@ -17,12 +17,14 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.ShopActivity"
+            android:parentActivityName=".view.MainActivity">
             android:label="@string/title_activity_shop"></activity>
         <activity
             android:name=".view.SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity
             android:name=".loginActivity.LoginActivity"
+            android:parentActivityName=".view.MainActivity"></activity>
             android:label="@string/title_activity_login" />
         <activity
             android:name=".view.DisplayMessageActivity"

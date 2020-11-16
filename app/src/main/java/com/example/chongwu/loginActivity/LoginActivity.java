@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -148,5 +149,18 @@ public class LoginActivity extends AppCompatActivity {
      */
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    /**
+     * @description 销毁登陆页面
+     * @param []
+     * @return void
+     * @author Lu Ning
+     * @time 2020/11/16 15:54
+     */
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("LoginActivity","销毁登陆页面");
     }
 }

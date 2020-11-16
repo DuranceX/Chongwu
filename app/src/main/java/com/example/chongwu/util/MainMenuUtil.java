@@ -50,7 +50,7 @@ public class MainMenuUtil {
      */
     public static void backToMainActivity(Context context, View view){
         Intent intent = new Intent(context, MainMenuUtil.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         Log.d("change","重回首页");
         context.startActivity(intent);
     }

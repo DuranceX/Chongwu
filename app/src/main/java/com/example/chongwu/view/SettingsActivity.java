@@ -1,6 +1,7 @@
 package com.example.chongwu.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -27,6 +28,19 @@ public class SettingsActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+    }
+
+    @Override
+    /**
+     * @description 销毁设置页面
+     * @param []
+     * @return void
+     * @author Lu Ning
+     * @time 2020/11/16 15:54
+     */
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("SettingsActivity","销毁设置页面");
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
@@ -57,6 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        finish();
         switch (item.getItemId()) {
             case R.id.main:
                 MainMenuUtil.backToMainActivity(this,null);

@@ -1,6 +1,7 @@
 package com.example.chongwu.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -33,6 +34,19 @@ public class ShopActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    @Override
+    /**
+     * @description 销毁商店页面
+     * @param []
+     * @return void
+     * @author Lu Ning
+     * @time 2020/11/16 15:54
+     */
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("ShopActivity","销毁商店页面");
+    }
+
     /**
      * @description  显示主菜单
      * @param menu
@@ -54,13 +68,16 @@ public class ShopActivity extends AppCompatActivity {
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        finish();
         switch (item.getItemId()) {
             case R.id.main:
                 MainMenuUtil.backToMainActivity(this,null);
                 break;
             case R.id.shop:
                 MainMenuUtil.openShop(this,null);
+//                onCreate(null); //相当于刷新
                 break;
+
             case R.id.setting:
                 MainMenuUtil.openSetting(this,null);
                 break;

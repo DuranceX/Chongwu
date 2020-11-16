@@ -37,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * @description 重回此页面后做的事
+     * @param
+     * @return
+     * @author Lu Ning
+     * @time 2020/11/16 15:52
+     */
+    protected void onRestart(){
+        super.onRestart();
+        Log.d("MainActivity","回到主页");
+    }
+    
+    /**
      * @description 测试连接数据库，使用UserDao对象的selectUser()方法
      * @param view
      * @return null
