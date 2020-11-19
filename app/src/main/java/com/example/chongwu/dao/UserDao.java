@@ -32,16 +32,4 @@ public class UserDao {
         Log.d("DBconnection Result", user.toString());
     }
 
-        /**
-         * @description 用户注册
-         * @param
-         * @return
-         * @author Lu Ning
-         * @time 2020/11/15 23:43
-         */
-        public void addNewUser() throws  SQLException{
-
-
-        }
-
 }
