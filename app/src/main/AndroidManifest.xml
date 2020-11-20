@@ -17,18 +17,15 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.ShopActivity"
-            android:parentActivityName=".view.MainActivity"
-            android:label="@string/title_activity_shop">
-        </activity>
+            android:label="@string/title_activity_shop"
+            android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".view.SettingsActivity"
-            android:label="@string/title_activity_settings" >
-        </activity>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".loginActivity.LoginActivity"
-            android:parentActivityName=".view.MainActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".view.DisplayMessageActivity"
             android:launchMode="singleTask"

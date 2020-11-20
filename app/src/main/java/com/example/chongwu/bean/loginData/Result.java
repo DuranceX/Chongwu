@@ -3,7 +3,16 @@ package com.example.chongwu.bean.loginData;
 /**
  * A generic class that holds a result success w/ data or an error exception.
  */
-public class Result<T> {
+
+
+
+/**
+ * @description 包含两个子类：Success和Error，返回结果的类型
+ * @param
+ * @return 返回子类对象
+ * @author Cardy Xie
+ * @time 2020/11/20 20:04
+ */public class Result<T> {
     // hide the private constructor to limit subclass types (Success, Error)
     private Result() {
     }

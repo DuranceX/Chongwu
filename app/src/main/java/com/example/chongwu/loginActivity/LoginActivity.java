@@ -1,5 +1,6 @@
 package com.example.chongwu.loginActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 
 import androidx.lifecycle.Observer;
@@ -23,6 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chongwu.Login.LoginCheck;
 import com.example.chongwu.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -117,14 +119,14 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         //按键触发登陆
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        /*loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
             }
-        });
+        });*/
     }
 
     /**
@@ -162,5 +164,14 @@ public class LoginActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("LoginActivity","销毁登陆页面");
+    }
+
+    public void checkUser(View view)
+    {
+        @SuppressLint("CutPasteId") EditText editTextUsername = findViewById(R.id.username);
+        @SuppressLint("CutPasteId") EditText editTextPassword = findViewById(R.id.password);
+        String username = editTextUsername.getText().toString();
+        String password = editTextPassword.getText().toString();
+        LoginCheck.isExisted(username, password);
     }
 }

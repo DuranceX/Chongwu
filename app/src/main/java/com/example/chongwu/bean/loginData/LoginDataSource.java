@@ -7,7 +7,15 @@ import java.io.IOException;
 /**
  * Class that handles authentication w/ login credentials and retrieves user information.
  */
-public class LoginDataSource {
+
+
+/**
+ * @description 登陆结果，如果用户登录成功则返回Result类的Success子类对象，反之返回Result类的Error子类对象
+ * @param
+ * @return 返回Error的子类对象
+ * @author Cardy Xie
+ * @time 2020/11/20 20:06
+ */public class LoginDataSource {
 
     public Result<User> login(String username, String password) {
 
@@ -15,7 +23,7 @@ public class LoginDataSource {
             // TODO: handle loggedInUser authentication
             User fakeUser =
                     new User(
-                            "23124");
+                            "admin","admin");
             return new Result.Success<>(fakeUser);
         } catch (Exception e) {
             return new Result.Error(new IOException("Error logging in", e));
