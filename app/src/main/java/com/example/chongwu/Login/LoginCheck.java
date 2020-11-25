@@ -1,6 +1,11 @@
 package com.example.chongwu.Login;
 
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.chongwu.Factory.UserDaoFactory;
 import com.example.chongwu.bean.User;
@@ -14,8 +19,10 @@ import java.sql.SQLException;
  */
 public class LoginCheck {
 
+    public static Boolean flag;
+
     public static boolean isExisted(String username, String password){
-        final boolean[] flag = {false};
+        flag=false;
         UserDao userDao = UserDaoFactory.getUserDaoInstance();
         new Thread(new Runnable() {
             @Override
@@ -24,12 +31,17 @@ public class LoginCheck {
                 {
                     if(userDao.checkUser(username,password))
                     {
-                        flag[0] = true;
+                        flag = true;
                         Log.d("DBconnection Result", username + "登陆成功");
                     }
                 }
             }
         }).start();
-        return flag[0];
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return flag;
     }
 }

@@ -88,6 +88,9 @@ public class SettingsActivity extends AppCompatActivity {
             case R.id.sign_in:
                 MainMenuUtil.signInAccount(this,null);  //调用自util
                 break;
+            case R.id.register:
+                MainMenuUtil.registerAccount(this,null);  //调用自util
+                break;
             default:
         }
         return true;

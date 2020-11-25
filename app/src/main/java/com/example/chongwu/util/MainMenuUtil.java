@@ -8,6 +8,7 @@ import android.view.View;
 import com.example.chongwu.loginActivity.LoginActivity;
 import com.example.chongwu.view.SettingsActivity;
 import com.example.chongwu.view.ShopActivity;
+import com.example.chongwu.view.registerActivity;
 
 /**
  * @description 为每个Activity的菜单提供点击方式的类
@@ -38,6 +39,12 @@ public class MainMenuUtil {
     public static void openSetting(Context context, View view){
         Intent intent = new Intent(context, SettingsActivity.class);
         Log.d("change","打开设置");
+        context.startActivity(intent);
+    }
+
+    public static void registerAccount(Context context, View view){
+        Intent intent = new Intent(context, registerActivity.class);
+        Log.d("change","打开注册界面");
         context.startActivity(intent);
     }
 
