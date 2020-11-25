@@ -14,8 +14,8 @@ import java.sql.SQLException;
  */
 public class LoginCheck {
 
-    public static boolean isExisted(String username, String password)
-    {
+    public static boolean isExisted(String username, String password){
+        final boolean[] flag = {false};
         UserDao userDao = UserDaoFactory.getUserDaoInstance();
         new Thread(new Runnable() {
             @Override
@@ -23,10 +23,13 @@ public class LoginCheck {
                 if(userDao.FindUser(username))
                 {
                     if(userDao.checkUser(username,password))
-                        Log.d("DBconnection Result", "登陆成功");
+                    {
+                        flag[0] = true;
+                        Log.d("DBconnection Result", username + "登陆成功");
+                    }
                 }
             }
         }).start();
-        return false;
+        return flag[0];
     }
 }

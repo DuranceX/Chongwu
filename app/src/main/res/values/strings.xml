@@ -21,6 +21,12 @@
     <string name="login_failed">"登陆失败"</string>
     <string name="title_activity_settings">设置界面</string>
     <string name="setting">设置</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="register">注册</string>
+    <string name="login">登陆</string>
+    <string name="telephone">手机号</string>
+    <string name="sex">性别</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

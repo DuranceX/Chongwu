@@ -4,8 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import android.annotation.SuppressLint;
 import android.util.Patterns;
+import android.widget.EditText;
 
+import com.example.chongwu.Login.LoginCheck;
 import com.example.chongwu.bean.loginData.LoginRepository;
 import com.example.chongwu.bean.loginData.Result;
 import com.example.chongwu.bean.User;
@@ -31,14 +34,20 @@ public class LoginViewModel extends ViewModel {
 
     public void login(String username, String password) {
         // can be launched in a separate asynchronous job
-        Result<User> result = loginRepository.login(username, password);
-
-        if (result instanceof Result.Success) {
-            User data = ((Result.Success<User>) result).getData();
+        if(checkUser(username, password))
+        {
+            User data = new User(username,password);
             loginResult.setValue(new LoginResult(new LoggedInUserView(data.getUserId())));
-        } else {
+        }
+        else {
             loginResult.setValue(new LoginResult(R.string.login_failed));
         }
+//        if (result instanceof Result.Success) {
+//            User data = ((Result.Success<User>) result).getData();
+//            loginResult.setValue(new LoginResult(new LoggedInUserView(data.getUserId())));
+//        } else {
+//            loginResult.setValue(new LoginResult(R.string.login_failed));
+//        }
     }
 
     public void loginDataChanged(String username, String password) {
@@ -81,5 +90,13 @@ public class LoginViewModel extends ViewModel {
      */
     private boolean isPasswordValid(String password) {
         return password != null && password.trim().length() > 5;
+    }
+
+    public boolean checkUser(String username,String password){
+        if(LoginCheck.isExisted(username, password))
+        {
+            return true;
+        };
+        return false;
     }
 }

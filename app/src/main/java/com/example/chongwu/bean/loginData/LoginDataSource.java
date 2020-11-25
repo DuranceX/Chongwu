@@ -1,5 +1,6 @@
 package com.example.chongwu.bean.loginData;
 
+import com.example.chongwu.Login.LoginCheck;
 import com.example.chongwu.bean.User;
 
 import java.io.IOException;
@@ -17,17 +18,19 @@ import java.io.IOException;
  * @time 2020/11/20 20:06
  */public class LoginDataSource {
 
-    public Result<User> login(String username, String password) {
+    public Result login(String username, String password) {
 
         try {
             // TODO: handle loggedInUser authentication
-            User fakeUser =
-                    new User(
-                            "admin","admin");
-            return new Result.Success<>(fakeUser);
+            if(LoginCheck.isExisted(username, password))
+            {
+                User user = new User(username,password);
+                return new Result.Success<>(user);
+            }
         } catch (Exception e) {
             return new Result.Error(new IOException("Error logging in", e));
         }
+        return null;
     }
 
     public void logout() {

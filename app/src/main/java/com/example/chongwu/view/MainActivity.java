@@ -55,20 +55,20 @@ public class MainActivity extends AppCompatActivity {
      * @author Cardy Xie
      * @time 2020/11/13 10:48
      */
-    public void dbtest(View view)
-    {
-        UserDao userDao = new UserDao();
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    userDao.selectUser();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
-    }
+//    public void dbtest(View view)
+//    {
+//        UserDao userDao = new UserDao();
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                try {
+//                    userDao.selectUser();
+//                } catch (SQLException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }).start();
+//    }
 
     /**
      * @description 发送消息示例，用于不同Activity间跳转及信息通信
