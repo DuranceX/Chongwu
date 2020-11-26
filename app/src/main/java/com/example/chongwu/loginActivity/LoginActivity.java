@@ -1,6 +1,5 @@
 package com.example.chongwu.loginActivity;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 
 import androidx.lifecycle.Observer;
@@ -20,11 +19,9 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chongwu.Login.LoginCheck;
 import com.example.chongwu.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -165,6 +162,4 @@ public class LoginActivity extends AppCompatActivity {
         super.onDestroy();
         Log.d("LoginActivity","销毁登陆页面");
     }
-
-
 }

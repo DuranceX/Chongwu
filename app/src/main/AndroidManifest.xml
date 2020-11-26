@@ -28,7 +28,7 @@
             android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".view.registerActivity"
-            android:label="@string/title_activity_register"
+            android:label="@string/registration"
             android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".view.DisplayMessageActivity"

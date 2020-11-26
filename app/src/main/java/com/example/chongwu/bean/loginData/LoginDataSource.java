@@ -1,6 +1,6 @@
 package com.example.chongwu.bean.loginData;
 
-import com.example.chongwu.Login.LoginCheck;
+import com.example.chongwu.loginActivity.LoginCheck;
 import com.example.chongwu.bean.User;
 
 import java.io.IOException;

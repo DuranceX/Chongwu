@@ -32,6 +32,13 @@ public class UserDao {
         Log.d("DBconnection Result", user.toString());
     }
 
+    /**
+     * @description 判断用户是否存在，如果存在返回true，不存在则返回false
+     * @param name，用户名；psw，密码
+     * @return Boolean
+     * @author Cardy Xie
+     * @time 2020/11/26 21:58
+     */
     public boolean FindUser(String name){
         String sql = "select * from user_login where username='" + name + "'";
 //        PreparedStatement prest = conn.prepareStatement(sql);
@@ -49,7 +56,13 @@ public class UserDao {
         return false;
     }
 
-    public boolean checkUser(String name, String psw){
+    /**
+     * @description 判断用户名的密码是否匹配，如果匹配则返回true，不匹配则返回false
+     * @param name,用户名;psw,密码
+     * @return Boolean
+     * @author Cardy Xie
+     * @time 2020/11/26 22:00
+     */public boolean checkUser(String name, String psw){
         String sql = "select * from user_login where username='" + name + "'";
 //        PreparedStatement prest = conn.prepareStatement(sql);
 //        ResultSet rs = prest.executeQuery(sql);
@@ -65,5 +78,19 @@ public class UserDao {
             e.printStackTrace();
         }
         return false;
+    }
+
+    public int insertUser(String name,String psw)
+    {
+        String sql = "insert into user_login values('" + name + "','" +psw + "')";
+        int x = DbUtil.executeUpdate(sql);
+        return x;
+    }
+
+    public int insertUserInfo(String name,String telephone,String sex)
+    {
+        String sql = "insert into user_information values('" + name + "','" + telephone + "','" + sex + "')";
+        int x = DbUtil.executeUpdate(sql);
+        return x;
     }
 }

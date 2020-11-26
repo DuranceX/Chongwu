@@ -4,14 +4,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import android.annotation.SuppressLint;
 import android.util.Patterns;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.chongwu.Login.LoginCheck;
 import com.example.chongwu.bean.loginData.LoginRepository;
-import com.example.chongwu.bean.loginData.Result;
 import com.example.chongwu.bean.User;
 import com.example.chongwu.R;
 

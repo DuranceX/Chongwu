@@ -3,33 +3,66 @@
     <PreferenceCategory app:title="@string/messages_header">
 
         <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
+            app:key="user_name"
+            app:title="@string/user_name"
             app:useSimpleSummaryProvider="true" />
+
 
         <ListPreference
             app:defaultValue="reply"
             app:entries="@array/reply_entries"
             app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
+            app:key="cloud_synchronization"
+            app:title="@string/cloud_synchronization"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="forget_password"
+            app:title="@string/forget_password"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="output_data"
+            app:title="@string/output_data"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/sync_header">
+    <PreferenceCategory app:title="@string/pet">
+        <EditTextPreference
+            app:key="pet_name"
+            app:title="@string/pet_name" />
+
+        <EditTextPreference
+            app:key="pet_class"
+            app:title="@string/pet_class"
+            app:useSimpleSummaryProvider="true" />
 
         <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
-
-        <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
-
+            app:key="if_play_with_friends"
+            app:title="@string/if_play_with_friends" />
     </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/setting">
+        <SwitchPreferenceCompat
+            app:key="stay_work"
+            app:title="@string/stay_work" />
+
+        <SwitchPreferenceCompat
+            app:key="open_music"
+            app:title="@string/open_music" />
+
+        <EditTextPreference
+            app:key="other_settings"
+            app:title="@string/other_settings" />
+    </PreferenceCategory>
+
+<!--    <PreferenceCategory app:title="@string/about">-->
+<!--        <Preference-->
+<!--            app:title="@string/frequent_problems"-->
+<!--            app:key="frequent_problems">-->
+<!--        </Preference>-->
+<!--    </PreferenceCategory>-->
 
 </PreferenceScreen>
