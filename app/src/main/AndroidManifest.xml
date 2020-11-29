@@ -32,13 +32,15 @@
             android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".view.DisplayMessageActivity"
-            android:launchMode="singleTask"
             android:parentActivityName=".view.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.chongwu.view.MainActivity" />
         </activity>
-        <activity android:name=".view.MainActivity">
+        <activity
+            android:name=".view.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

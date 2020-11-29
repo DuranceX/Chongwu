@@ -1,5 +1,6 @@
 package com.example.chongwu.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -74,8 +75,11 @@ public class SettingsActivity extends AppCompatActivity {
         finish();
         switch (item.getItemId()) {
             case R.id.main:
-                MainMenuUtil.backToMainActivity(this,null);
+//                MainMenuUtil.backToMainActivity(this,null);
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
+
             case R.id.shop:
                 MainMenuUtil.openShop(this,null);
                 break;

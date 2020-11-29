@@ -49,7 +49,7 @@ public class MainMenuUtil {
     }
 
     /**
-     * @description 回到首页，目前存在bug
+     * @description 回到首页，目前存在bug,暂时不用，以后观察
      * @param
      * @return
      * @author Lu Ning
