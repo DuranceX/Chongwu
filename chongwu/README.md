@@ -47,22 +47,12 @@ res             //资源文件夹
 |——images
 
 
-project
-    ├── widget
-    │   ├── a
-    │   │   ├── a.css
-    │   │   ├── a.js
-    │   │   └── a.php
-    │   ├── b
-    │   │   ├── b.css
-    │   │   ├── b.js
-    │   │   └── b.php
-    │   └── c
-    │       ├── c.css
-    │       ├── c.js
-    │       └── c.php
-    ├── bootstrap.css
-    ├── bootstrap.js
-    ├── index.php
-    └── jquery.js
+##目录
+* [中文](#中文)    //标题要是中文才可以不知道为什么，试了英文不行
+    * [中文a](#中文a)
+    * [中文b](#中文b)
+...
+##中文
+###中文a
+###中文b
 
