@@ -23,7 +23,7 @@
   
   
   
-  res             //资源文件夹
-  |
-  |——fonts
-  |——images
+    res             //资源文件夹
+    |
+    |——fonts
+    |——images
