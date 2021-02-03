@@ -1,4 +1,11 @@
+import 'package:chongwu/pages/SettingPage.dart';
+import 'package:chongwu/values/MyIcons.dart';
+import 'package:chongwu/values/Texts.dart';
 import 'package:flutter/material.dart';
+
+import 'FeedbackPage.dart';
+import 'MinePage.dart';
+import 'ShopPage.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -20,12 +27,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
 
-  int _selectedIndex = 0;
   TabController tabController;
   List<Tab> bottomTabs = <Tab>[
     Tab(icon: Icon(Icons.menu_book_rounded,),text: "Learn",iconMargin: EdgeInsets.only(bottom: 0),),
     Tab(icon: Icon(Icons.sports_basketball),text: "Play",iconMargin: EdgeInsets.only(bottom: 0),)
   ];
+  String _bodyStr1 = "This is Learning Page";
+  String _bodyStr2 = "This is Play Page";
 
   @override
   void initState() {
@@ -65,7 +73,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             child: new TabBar(
               controller: tabController,
               tabs: bottomTabs,
-              onTap: onItemTapped,
+              //onTap: onItemTapped,
               indicatorColor: Colors.white,
               labelColor: Colors.deepOrangeAccent,
               unselectedLabelColor: Colors.grey,
@@ -94,7 +102,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                         ),
                       ),
                       alignment: Alignment.center,
-                      child: Text("This is Learning Page",textScaleFactor: 2.0,style: TextStyle(color: Colors.white),),
+                      child: Text(_bodyStr1,textScaleFactor: 2.0,style: TextStyle(color: Colors.white),),
                     )
                 ),
                 ConstrainedBox(                                 //Play页面的内容
@@ -109,13 +117,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                         ),
                       ),
                       alignment: Alignment.center,
-                      child: Text("This is Play Page",textScaleFactor: 2.0,style: TextStyle(color: Colors.white),),
+                      child: Text(_bodyStr2,textScaleFactor: 2.0,style: TextStyle(color: Colors.white),),
                     )
                 ),
               ]
           ),
           new AppBar(
-            toolbarHeight: 50,
+            toolbarHeight: 40,
             centerTitle: true,
             elevation: 0,
             backgroundColor: Colors.transparent,
@@ -123,24 +131,55 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             // the App.build method, and use it to set our appbar title.
             title: Text(widget.title,style: TextStyle(color: Colors.white),),
             actions: <Widget>[
-              PopupMenuButton<Text>(
-                icon: Icon(Icons.list_rounded,size: 35,color: Colors.grey,),
+              PopupMenuButton<String>(
+                icon: Icon(MyIcons.menu,size: 30,color: Colors.grey,),
+                onSelected: (String value){
+                  if(value == "Shop"){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return new ShopPage();
+                    }));
+                  }
+                  else if (value == "Setting"){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return new SettingPage();
+                    }));
+                  }
+                  else if (value == "Mine"){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return new MinePage();
+                    }));
+                  }
+                  else if (value == "Feedback"){
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return new FeedbackPage();
+                    }));
+                  }
+                },
                 itemBuilder: (context) {
                   return [
                     PopupMenuItem(
+                      value: "Shop",
                       child: Text(
-                        "first",
+                        Texts.shop,
                       ),
                     ),
                     PopupMenuItem(
+                      value: "Mine",
                       child: Text(
-                        "second",
+                        Texts.mine,
                       ),
                     ),
                     PopupMenuItem(
+                      value: "Feedback",
                       child: Text(
-                        "third",
+                        Texts.feedback,
                       ),
+                    ),
+                    PopupMenuItem(
+                      value: "Setting",
+                      child: Text(
+                        Texts.setting
+                      )
                     ),
                   ];
                 },
@@ -155,7 +194,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   void onItemTapped(int index){
     setState(() {
-      _selectedIndex = index;
     });
   }
 
