@@ -8,15 +8,15 @@ lib
 
 |
 
-|——pages         //界面文件夹
+|-pages         //界面文件夹
 
 |&emsp;|
 
-|   |——FeedbackPage.dart    //反馈界面，不一定需要，先占位
+|   |-FeedbackPage.dart    //反馈界面，不一定需要，先占位
 
-|   |——HomePage.dart        //主界面，Learn和Play
+|   |-HomePage.dart        //主界面，Learn和Play
 
-|   |——MinePage.dart        //个人界面
+|   |-MinePage.dart        //个人界面
 
 |   |——SettingPage.dart     //设置界面
 
