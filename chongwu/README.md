@@ -47,3 +47,22 @@ res             //资源文件夹
 |——images
 
 
+project
+    ├── widget
+    │   ├── a
+    │   │   ├── a.css
+    │   │   ├── a.js
+    │   │   └── a.php
+    │   ├── b
+    │   │   ├── b.css
+    │   │   ├── b.js
+    │   │   └── b.php
+    │   └── c
+    │       ├── c.css
+    │       ├── c.js
+    │       └── c.php
+    ├── bootstrap.css
+    ├── bootstrap.js
+    ├── index.php
+    └── jquery.js
+
