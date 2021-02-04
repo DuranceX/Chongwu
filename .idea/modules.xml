@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Work_Android_Chongwu.iml" filepath="$PROJECT_DIR$/.idea/Work_Android_Chongwu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chongwu.iml" filepath="$PROJECT_DIR$/chongwu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/chongwu_android.iml" filepath="$PROJECT_DIR$/android/chongwu_android.iml" />
     </modules>
   </component>
 </project>

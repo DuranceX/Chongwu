@@ -1,45 +1,340 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9144c4b1-2b0a-42d2-b744-01641444041f" name="Default Changelist" comment="" />
+    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Runner/Runner-Bridging-Header.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fonts/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/images/111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/kotlin/com/example/chongwu/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/DemoFlowPopMenu.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/FeedbackPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/FocusImage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/FocusImages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/HomePage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/MinePage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/PhotoViewPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/SettingPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/pages/ShopPage.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/values/MyIcons.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/lib/values/Texts.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/res/fonts/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/res/images/111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/res/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chongwu/test/widget_test.dart" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[47517192]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="origin/Cardy" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Cardy &lt;1124804361@qq.com&gt;" />
+        <option value="Cardy" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1nrymyCA7uSTjDnO2PAc6YxsUsj" />
+  <component name="ProjectId" id="1nryuBtFqEccbrGnrNuhGOmpleo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib" />
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib\pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\res\fonts" />
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\res\images" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9144c4b1-2b0a-42d2-b744-01641444041f" name="Default Changelist" comment="" />
-      <created>1612162666156</created>
+      <changelist id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="" />
+      <created>1612162724684</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1612162666156</updated>
+      <updated>1612162724684</updated>
     </task>
+    <task id="LOCAL-00001" summary="四个子界面的大致构建">
+      <created>1612346008488</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612346008488</updated>
+    </task>
+    <task id="LOCAL-00002" summary="图片聚焦显示的效果实现，以及商店界面选购商品的弹出窗口">
+      <created>1612431008760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612431008760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="主界面的构建" />
+    <MESSAGE value="四个子界面的大致构建" />
+    <MESSAGE value="图片聚焦显示的效果实现，以及商店界面选购商品的弹出窗口" />
+    <option name="LAST_COMMIT_MESSAGE" value="图片聚焦显示的效果实现，以及商店界面选购商品的弹出窗口" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="839" y="310" key="FileChooserDialogImpl" timestamp="1612162696161">
+    <state x="980" y="415" key="#Notifications" timestamp="1612431079008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="839" y="310" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1612162696161" />
+    <state x="980" y="415" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1612431079008" />
+    <state x="326" y="302" key="#PSD" timestamp="1612431893962">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="326" y="302" key="#PSD/0.0.1920.1080@0.0.1920.1080" timestamp="1612431893962" />
+    <state x="261" y="133" width="1200" height="858" key="AVDManager" timestamp="1612404794190">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="261" y="133" width="1200" height="858" key="AVDManager/0.0.1920.1080@0.0.1920.1080" timestamp="1612404794190" />
+    <state x="1006" y="309" key="AndroidProcessChooserDialog" timestamp="1612264244066">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612264244066" />
+    <state x="378" y="118" key="CommitChangelistDialog2" timestamp="1612431007362">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="378" y="118" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612431007362" />
+    <state x="1191" y="303" key="FileChooserDialogImpl" timestamp="1612408688211">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1191" y="303" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1612408688211" />
+    <state width="670" height="209" key="GridCell.Tab.0.bottom" timestamp="1612432791724">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="670" height="209" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1612432791724" />
+    <state width="670" height="209" key="GridCell.Tab.0.center" timestamp="1612432791724">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="670" height="209" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1612432791724" />
+    <state width="670" height="209" key="GridCell.Tab.0.left" timestamp="1612432791724">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="670" height="209" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1612432791724" />
+    <state width="670" height="209" key="GridCell.Tab.0.right" timestamp="1612432791724">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="670" height="209" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1612432791724" />
+    <state x="1121" y="293" key="MultipleFileMergeDialog" timestamp="1612432711505">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1121" y="293" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612432711505" />
+    <state x="282" y="196" key="SettingsEditor" timestamp="1612432926483">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="282" y="196" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1612432926483" />
+    <state x="669" y="274" key="Vcs.Push.Dialog.v2" timestamp="1612432737594">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="669" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612432737594" />
+    <state x="1271" y="447" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612432277347">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1271" y="447" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612432277347" />
+    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1612256577832">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1612256577832" />
   </component>
 </project>
