@@ -44,6 +44,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final width = size.width;
     return Scaffold(
       // appBar: AppBar(
       //   toolbarHeight: 50,
@@ -158,10 +160,32 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                 itemBuilder: (context) {
                   return [
                     PopupMenuItem(
-                      value: "Shop",
-                      child: Text(
-                        Texts.shop,
-                      ),
+                        value: "Shop",
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
+                                child: SizedBox(
+                                  width: width/3,
+                                  height: width/4,
+                                  child: DecoratedBox(
+                                    decoration: BoxDecoration(
+                                      color: Colors.deepOrangeAccent,
+                                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                                    ),
+                                    child: Center(
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: <Widget>[
+                                          Icon(Icons.storefront,color: Colors.white,),
+                                          Text(Texts.shop,style: TextStyle(color: Colors.white),)
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                )
+                            )
+                          ],
+                        )
                     ),
                     PopupMenuItem(
                       value: "Mine",
