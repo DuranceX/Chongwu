@@ -14,7 +14,6 @@
     |   |——SettingPage.dart     //设置界面
     |   |——ShopPage.dart        //商店界面
     |   |——PhotoViewPage.dart   //图片预览界面
-    |   |——Demo/Focus...        //暂无用处，测试用
     |
     |——values       //全局数据文件夹
     |   |
