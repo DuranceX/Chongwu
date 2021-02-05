@@ -14,11 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/FocusImage.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/FocusImages.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/ShopPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/ShopPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/MinePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/MinePage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612433148222</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="商店背景页的图片聚焦效果实现">
+      <created>1612491395320</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1612491395320</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +170,8 @@
     <MESSAGE value="四个子界面的大致构建" />
     <MESSAGE value="图片聚焦显示的效果实现，以及商店界面选购商品的弹出窗口" />
     <MESSAGE value="切换目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="切换目录" />
+    <MESSAGE value="商店背景页的图片聚焦效果实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="商店背景页的图片聚焦效果实现" />
   </component>
   <component name="WindowStateProjectService">
     <state x="980" y="415" key="#Notifications" timestamp="1612431079008">
@@ -190,10 +194,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612264244066" />
-    <state x="378" y="118" key="CommitChangelistDialog2" timestamp="1612433147383">
+    <state x="378" y="118" key="CommitChangelistDialog2" timestamp="1612491393895">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="378" y="118" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612433147383" />
+    <state x="378" y="118" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612491393895" />
     <state x="1191" y="303" key="FileChooserDialogImpl" timestamp="1612408688211">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -222,10 +226,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="282" y="196" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1612432926483" />
-    <state x="669" y="274" key="Vcs.Push.Dialog.v2" timestamp="1612433279743">
+    <state x="511" y="260" key="Vcs.Push.Dialog.v2" timestamp="1612491415694">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="669" y="274" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612433279743" />
+    <state x="511" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612491415694" />
     <state x="1271" y="447" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612432277347">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

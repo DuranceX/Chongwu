@@ -15,7 +15,8 @@ class MinePageState extends State<MinePage>{
     "##locked##",
     "res/images/111.jpg",
     "res/images/background.jpg",
-    "##locked##"
+    "##locked##",
+    "##none##"
   ];
 
   PageController _pageController;
@@ -185,7 +186,31 @@ class MinePageState extends State<MinePage>{
                                 ..setTranslationRaw(0.0, _height * (1 - _scaleFactor) / 2, 0.0);
                             }
 
-                            if(memory[index] != "##locked##"){
+                            if(memory[index] == "##locked##"){
+                              return Transform(
+                                transform: matrix4,
+                                child: Container(
+                                  color: Colors.blue,
+                                  child: Center(
+                                    child: Text("Locked",style: TextStyle(fontSize: 45,color: Colors.white),),
+                                  ),
+                                ),
+                              );
+                            }
+
+                            else if(memory[index] == "##none##"){
+                              return Transform(
+                                transform: matrix4,
+                                child: Container(
+                                  color: Colors.grey,
+                                  child: Center(
+                                    child: Text("没有更多了~",style: TextStyle(fontSize: 35,color: Colors.white),),
+                                  ),
+                                ),
+                              );
+                            }
+
+                            else{
                               return Transform(
                                 transform: matrix4,
                                 child: Container(
@@ -196,17 +221,6 @@ class MinePageState extends State<MinePage>{
                                     child: Image(image: AssetImage(memory[index % (memory.length-1)]),fit: BoxFit.cover,),
                                   ),
                                 ),
-                              );
-                            }
-                            else{
-                              return Transform(
-                                  transform: matrix4,
-                                  child: Container(
-                                    color: Colors.blue,
-                                    child: Center(
-                                      child: Text("Locked",style: TextStyle(fontSize: 45,color: Colors.white),),
-                                    ),
-                                  ),
                               );
                             }
                           },
