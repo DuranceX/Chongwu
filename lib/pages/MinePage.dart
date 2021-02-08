@@ -1,3 +1,4 @@
+import 'package:chongwu/pages/MemoriesOverviewPage.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/Texts.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,8 @@ class MinePageState extends State<MinePage>{
     "##locked##",
     "res/images/111.jpg",
     "res/images/background.jpg",
-    "##locked##"
+    "##locked##",
+    "##none##"
   ];
 
   PageController _pageController;
@@ -139,6 +141,17 @@ class MinePageState extends State<MinePage>{
                 ),
               ),
               Divider(thickness: 1,),
+              SizedBox(
+                height: 30,
+                child: InkWell(
+                  child: Text("相册目录"),
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                      return MemoriesOverviewPage();
+                    }));
+                  },
+                ),
+              ),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
                 child: ConstrainedBox(
@@ -185,7 +198,31 @@ class MinePageState extends State<MinePage>{
                                 ..setTranslationRaw(0.0, _height * (1 - _scaleFactor) / 2, 0.0);
                             }
 
-                            if(memory[index] != "##locked##"){
+                            if(memory[index] == "##locked##"){
+                              return Transform(
+                                transform: matrix4,
+                                child: Container(
+                                  color: Colors.blue,
+                                  child: Center(
+                                    child: Text("Locked",style: TextStyle(fontSize: 45,color: Colors.white),),
+                                  ),
+                                ),
+                              );
+                            }
+
+                            else if(memory[index] == "##none##"){
+                              return Transform(
+                                transform: matrix4,
+                                child: Container(
+                                  color: Colors.grey,
+                                  child: Center(
+                                    child: Text("没有更多了~",style: TextStyle(fontSize: 35,color: Colors.white),),
+                                  ),
+                                ),
+                              );
+                            }
+
+                            else{
                               return Transform(
                                 transform: matrix4,
                                 child: Container(
@@ -196,17 +233,6 @@ class MinePageState extends State<MinePage>{
                                     child: Image(image: AssetImage(memory[index % (memory.length-1)]),fit: BoxFit.cover,),
                                   ),
                                 ),
-                              );
-                            }
-                            else{
-                              return Transform(
-                                  transform: matrix4,
-                                  child: Container(
-                                    color: Colors.blue,
-                                    child: Center(
-                                      child: Text("Locked",style: TextStyle(fontSize: 45,color: Colors.white),),
-                                    ),
-                                  ),
                               );
                             }
                           },

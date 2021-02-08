@@ -244,28 +244,95 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          ConstrainedBox(
-                            constraints: BoxConstraints(
+                          InkWell(
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
                                 minWidth: (width/2-30).floor().toDouble(),
                                 minHeight: (width/2-30).floor().toDouble()-35,
-                                maxHeight: (width/2-30).floor().toDouble()-35
-                            ),
-                            child: DecoratedBox(
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black38,
-                                      offset: Offset(1.0,2.0),
-                                      blurRadius: 4.0,
-                                    )
-                                  ]
+                                maxHeight: (width/2-30).floor().toDouble()-35,
                               ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                child: Image(image: AssetImage(backgroundImages[index1]),fit: BoxFit.cover,),
+                              child: DecoratedBox(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black38,
+                                        offset: Offset(1.0,2.0),
+                                        blurRadius: 4.0,
+                                      )
+                                    ]
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                                  child: Image(
+                                    image: AssetImage(backgroundImages[index1]),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
                             ),
+                            onTap: (){
+                              showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      contentPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                                      content: ConstrainedBox(
+                                        constraints: BoxConstraints(
+                                          maxHeight: 175,
+                                        ),
+                                        child: Column(
+                                          children: <Widget>[
+                                            Padding(
+                                              padding: EdgeInsets.all(0),
+                                              child: ConstrainedBox(
+                                                constraints: BoxConstraints(
+                                                  maxHeight: 145,
+                                                ),
+                                                child: InkWell(
+                                                  child: Image(image: AssetImage(
+                                                      backgroundImages[index1]),),
+                                                  onTap: () {
+                                                    Navigator.of(context).push(
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return PhotoViewPage(
+                                                                image: backgroundImages[index1],);
+                                                            }));
+                                                  },
+                                                ),
+                                              )
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                              child: Center(
+                                                child: Text("Clothes" + (index1+1).toString()),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      actions: <Widget>[
+                                        OutlineButton(child: Text('取消',style: TextStyle(fontSize: 18),),onPressed: (){Navigator.pop(context);},),
+                                        OutlineButton(child: Text('购买',style: TextStyle(fontSize: 18),),onPressed: (){
+                                          showDialog(
+                                              context: context,
+                                              builder: (context){
+                                                return AlertDialog(
+                                                    content: Text("确认购买"),
+                                                    actions: <Widget>[
+                                                      OutlineButton(child: Text('取消',style: TextStyle(fontSize: 18),),onPressed: (){Navigator.pop(context);},),
+                                                      OutlineButton(child: Text('购买',style: TextStyle(fontSize: 18),),onPressed: (){}),
+                                                    ]
+                                                );
+                                              }
+                                          );
+                                        },),
+                                      ],
+                                    );
+                                  }
+                              );
+                            },
                           ),
                           Padding(
                             padding: EdgeInsets.only(top:10),
