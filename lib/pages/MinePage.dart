@@ -1,3 +1,4 @@
+import 'package:chongwu/pages/MemoriesOverviewPage.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/Texts.dart';
 import 'package:flutter/cupertino.dart';
@@ -140,6 +141,17 @@ class MinePageState extends State<MinePage>{
                 ),
               ),
               Divider(thickness: 1,),
+              SizedBox(
+                height: 30,
+                child: InkWell(
+                  child: Text("相册目录"),
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                      return MemoriesOverviewPage();
+                    }));
+                  },
+                ),
+              ),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
                 child: ConstrainedBox(

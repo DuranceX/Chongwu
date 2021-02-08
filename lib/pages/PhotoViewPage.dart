@@ -35,6 +35,17 @@ class PhotoViewPage extends StatelessWidget{
         onTap: (){
           Navigator.pop(context);
         },
+        onLongPress: (){
+          showDialog(
+            context: context,
+            builder: (context){
+              return AlertDialog(
+                title: Text("Tips"),
+                content: Text("别按了别按了\n不会让你保存的"),
+              );
+            }
+          );
+        },
       )
     );
   }
