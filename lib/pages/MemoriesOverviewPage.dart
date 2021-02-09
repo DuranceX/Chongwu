@@ -62,11 +62,12 @@ class MemoriesOverviewPage extends StatelessWidget{
               ),
               DecoratedBox(
                   decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Color.fromRGBO(0,0,0, 0.1),Color.fromRGBO(0, 0, 0, 0.5)],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      )
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: LinearGradient(
+                      colors: [Color.fromRGBO(0,0,0, 0.1),Color.fromRGBO(0, 0, 0, 0.5)],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    )
                   ),
                   child: Container(height: 160,)
                 ),

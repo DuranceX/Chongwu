@@ -12,13 +12,14 @@ class DioTestPageState extends State<DioTestPage>{
   List _list = [];
 
   void _getData() async{
-    String Url = "http://a.itying.com/api/productlist";
-    Response response = await Dio(new BaseOptions(responseType: ResponseType.plain)).get(Url);
-    setState(() {
-      _list = json.decode(response.data.toString())['result'];
-    });
-    print(_list[0]["list"][0]["title"]);
-    print(_list[0]["list"].length);
+    String Url = "http://47.114.76.8/api/login/1";
+    Response response = await Dio().post(Url,data: {"username": "test2","password": "test1"});
+    // setState(() {
+    //   _list = json.decode(response.data.toString())['result'];
+    // });
+    // print(_list[0]["list"][0]["title"]);
+    // print(_list[0]["list"].length);
+    print(response.data.toString());
   }
 
   List<Widget> _getSubTitle(context,index){
