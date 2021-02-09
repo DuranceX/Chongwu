@@ -1,3 +1,4 @@
+import 'package:chongwu/pages/DioTestPage.dart';
 import 'package:chongwu/values/Texts.dart';
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/cupertino.dart';
@@ -92,6 +93,18 @@ class FeedbackPageState extends State<FeedbackPage>{
                           fontSize: 20,
                         ),
                       ),
+                    ),
+                    RaisedButton(
+                      child: Text("Dio Test"),
+                      onPressed: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context){
+                              return DioTestPage();
+                            }
+                          )
+                        );
+                      },
                     )
                   ],
                 ),
