@@ -13,11 +13,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="">
+    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="Merge branch 'Cardy' of https://github.com/DuranceX/Chongwu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;lib/pages/DioTestPage.dart">
+      <change afterPath="$PROJECT_DIR$/lib/Test/OverlayDemo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Test/PopupMenuTestPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/DioTestPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/DioTestPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/DioTestPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Test/DioTestPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/MemoriesOverviewPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/MemoriesOverviewPage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +91,7 @@
     <property name="DEBUGGER_ID" value="Java" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -98,13 +102,14 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib" />
-      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\res\fonts" />
       <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\res\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\lib\Test" />
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib" />
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib\pages" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -232,18 +237,19 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="585" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612486505662" />
-    <state x="261" y="133" width="1200" height="858" key="AVDManager" timestamp="1612486807748">
+    <state x="261" y="133" width="1200" height="858" key="AVDManager" timestamp="1613548188601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="261" y="133" width="1200" height="858" key="AVDManager/0.0.1920.1080@0.0.1920.1080" timestamp="1612486807748" />
-    <state x="1006" y="309" key="AndroidProcessChooserDialog" timestamp="1612840234691">
+    <state x="261" y="133" width="1200" height="858" key="AVDManager/0.0.1920.1080@0.0.1920.1080" timestamp="1613548188601" />
+    <state x="1006" y="309" key="AndroidProcessChooserDialog" timestamp="1613564305845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612840234691" />
-    <state x="1073" y="234" key="CommitChangelistDialog2" timestamp="1612860959921">
+    <state x="1006" y="298" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612871750148" />
+    <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1613564305845" />
+    <state x="554" y="135" key="CommitChangelistDialog2" timestamp="1613565811485">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1073" y="234" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612860959921" />
+    <state x="554" y="135" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1613565811485" />
     <state x="490" y="140" width="1200" height="848" key="DiffContextDialog" timestamp="1612859792145">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -252,22 +258,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1191" y="303" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1612408688211" />
-    <state width="1340" height="250" key="GridCell.Tab.0.bottom" timestamp="1612969968781">
+    <state width="1340" height="284" key="GridCell.Tab.0.bottom" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968781" />
-    <state width="1340" height="250" key="GridCell.Tab.0.center" timestamp="1612969968780">
+    <state width="1340" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state width="1340" height="284" key="GridCell.Tab.0.center" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968780" />
-    <state width="1340" height="250" key="GridCell.Tab.0.left" timestamp="1612969968780">
+    <state width="1340" height="284" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state width="1340" height="284" key="GridCell.Tab.0.left" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968780" />
-    <state width="1340" height="250" key="GridCell.Tab.0.right" timestamp="1612969968780">
+    <state width="1340" height="284" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state width="1340" height="284" key="GridCell.Tab.0.right" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968780" />
+    <state width="1340" height="284" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
     <state x="813" y="283" key="IDE.errors.dialog" timestamp="1612837679248">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -296,9 +302,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1271" y="447" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612432277347" />
-    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1612774952535">
+    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1613546342294">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1612774952535" />
+    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1613546342294" />
   </component>
 </project>
