@@ -16,6 +16,7 @@
     <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/DioTestPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/DioTestPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/MemoriesOverviewPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/MemoriesOverviewPage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -180,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612844954988</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="测试Dio库方法">
+      <created>1612860960754</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612860960754</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,10 +240,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612840234691" />
-    <state x="1073" y="234" key="CommitChangelistDialog2" timestamp="1612844953913">
+    <state x="1073" y="234" key="CommitChangelistDialog2" timestamp="1612860959921">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1073" y="234" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612844953913" />
+    <state x="1073" y="234" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612860959921" />
     <state x="490" y="140" width="1200" height="848" key="DiffContextDialog" timestamp="1612859792145">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -244,22 +252,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1191" y="303" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1612408688211" />
-    <state width="1340" height="250" key="GridCell.Tab.0.bottom" timestamp="1612858048294">
+    <state width="1340" height="250" key="GridCell.Tab.0.bottom" timestamp="1612969968781">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1612858048294" />
-    <state width="1340" height="250" key="GridCell.Tab.0.center" timestamp="1612858048294">
+    <state width="1340" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968781" />
+    <state width="1340" height="250" key="GridCell.Tab.0.center" timestamp="1612969968780">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1612858048294" />
-    <state width="1340" height="250" key="GridCell.Tab.0.left" timestamp="1612858048294">
+    <state width="1340" height="250" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968780" />
+    <state width="1340" height="250" key="GridCell.Tab.0.left" timestamp="1612969968780">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1612858048294" />
-    <state width="1340" height="250" key="GridCell.Tab.0.right" timestamp="1612858048294">
+    <state width="1340" height="250" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968780" />
+    <state width="1340" height="250" key="GridCell.Tab.0.right" timestamp="1612969968780">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1612858048294" />
+    <state width="1340" height="250" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1612969968780" />
     <state x="813" y="283" key="IDE.errors.dialog" timestamp="1612837679248">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -272,14 +280,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1121" y="293" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612790490239" />
-    <state x="282" y="196" key="SettingsEditor" timestamp="1612432926483">
+    <state x="540" y="224" key="SettingsEditor" timestamp="1612871374749">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="282" y="196" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1612432926483" />
-    <state x="511" y="260" key="Vcs.Push.Dialog.v2" timestamp="1612844969136">
+    <state x="540" y="224" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1612871374749" />
+    <state x="511" y="260" key="Vcs.Push.Dialog.v2" timestamp="1612860967378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="511" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612844969136" />
+    <state x="511" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612860967378" />
     <state x="947" y="327" key="git4idea.merge.GitPullDialog" timestamp="1612837673736">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

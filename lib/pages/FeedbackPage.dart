@@ -1,6 +1,5 @@
 import 'package:chongwu/pages/DioTestPage.dart';
 import 'package:chongwu/values/Texts.dart';
-import 'package:extended_image/extended_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,13 +15,18 @@ class FeedbackPageState extends State<FeedbackPage>{
     final width = MediaQuery.of(context).size.width;
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        leading: BackButton(color: Colors.white,),
-        toolbarHeight: 40,
-        title: Text(Texts.feedback,style: TextStyle(color: Colors.white),),
-        centerTitle: true,
-      ),
-      body: Column(
+        appBar: AppBar(
+          leading: BackButton(
+            color: Colors.white,
+          ),
+          toolbarHeight: 40,
+          title: Text(
+            Texts.feedback,
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+        ),
+        body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -40,14 +44,6 @@ class FeedbackPageState extends State<FeedbackPage>{
                     Container(
                       child: DecoratedBox(
                         decoration: BoxDecoration(
-                            // borderRadius: BorderRadius.circular(10),
-                            // boxShadow: [
-                            //   BoxShadow(
-                            //     color: Colors.black38,
-                            //     offset: Offset(1.0,2.0),
-                            //     blurRadius: 4.0,
-                            //   )
-                            // ]
                           color: Colors.blue,
                         ),
                         child: SizedBox(
@@ -56,7 +52,7 @@ class FeedbackPageState extends State<FeedbackPage>{
                           child: ClipRRect(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             child: Image(
-                              image: AssetImage("res/images/background.jpg"),
+                              image: NetworkImage("http://47.114.76.8/media/t1.png"),
                               fit: BoxFit.cover,
                             ),
                           ),
