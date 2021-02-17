@@ -6,7 +6,7 @@
 
     lib
     |
-    |-pages         //界面文件夹
+    |——pages         //界面文件夹
     |   |
     |   |——DemoFlowPopMenu.dart //测试功能用
     |   |——FeedbackPage.dart    //反馈界面，不一定需要，先占位
@@ -17,6 +17,12 @@
     |   |——ShopPage.dart        //商店界面
     |   |——PhotoViewPage.dart   //图片预览界面
     |   |——SingleSeriesPhotoPage.dart  //单个系列的图片合集页面
+    |
+    |——Test        //测试功能
+    |   |
+    |   |——DioTestPage.dart     //Dio库测试
+    |   |——OverlayDemo.dart     //自定义菜单案例
+    |   |——PopupMenuTestPage.dart  //自定义菜单，即4个主界面选项
     |
     |——values       //全局数据文件夹
     |   |

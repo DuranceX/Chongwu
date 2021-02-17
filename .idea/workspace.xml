@@ -13,15 +13,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="">
+    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="Merge branch 'Cardy' of https://github.com/DuranceX/Chongwu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;lib/pages/DioTestPage.dart">
+      <change afterPath="$PROJECT_DIR$/lib/Test/OverlayDemo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Test/PopupMenuTestPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/DioTestPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Test/DioTestPage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/FeedbackPage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[47517192]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -79,25 +86,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DEBUGGABLE_DEVICE" value="xiaomi-mi_8-47517192" />
+    <property name="DEBUGGABLE_PROCESS" value="com.example.chongwu" />
+    <property name="DEBUGGER_ID" value="Java" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib" />
-      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib\pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\res\fonts" />
       <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\res\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\lib\Test" />
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib" />
+      <recent name="E:\Work\Work_Android\Work_Android_Chongwu\chongwu\lib\pages" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -160,7 +172,28 @@
       <option name="project" value="LOCAL" />
       <updated>1612789792664</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update Md">
+      <created>1612790050342</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612790050342</updated>
+    </task>
+    <task id="LOCAL-00009" summary="测试Dio库方法">
+      <created>1612844954988</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612844954988</updated>
+    </task>
+    <task id="LOCAL-00010" summary="测试Dio库方法">
+      <created>1612860960754</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612860960754</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +220,9 @@
     <MESSAGE value="商店背景页的图片聚焦效果实现" />
     <MESSAGE value="“我的”界面相册预览到底提示" />
     <MESSAGE value="相册完整页面的实现，以及单个相册系列的页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="相册完整页面的实现，以及单个相册系列的页面" />
+    <MESSAGE value="Update Md" />
+    <MESSAGE value="测试Dio库方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试Dio库方法" />
   </component>
   <component name="WindowStateProjectService">
     <state x="980" y="415" key="#Notifications" timestamp="1612431079008">
@@ -202,57 +237,74 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="585" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612486505662" />
-    <state x="261" y="133" width="1200" height="858" key="AVDManager" timestamp="1612486807748">
+    <state x="261" y="133" width="1200" height="858" key="AVDManager" timestamp="1613548188601">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="261" y="133" width="1200" height="858" key="AVDManager/0.0.1920.1080@0.0.1920.1080" timestamp="1612486807748" />
-    <state x="1006" y="309" key="AndroidProcessChooserDialog" timestamp="1612264244066">
+    <state x="261" y="133" width="1200" height="858" key="AVDManager/0.0.1920.1080@0.0.1920.1080" timestamp="1613548188601" />
+    <state x="1006" y="309" key="AndroidProcessChooserDialog" timestamp="1613564305845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612264244066" />
-    <state x="1073" y="234" key="CommitChangelistDialog2" timestamp="1612789789602">
+    <state x="1006" y="298" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1612871750148" />
+    <state x="1006" y="309" key="AndroidProcessChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1613564305845" />
+    <state x="554" y="135" key="CommitChangelistDialog2" timestamp="1613565811485">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1073" y="234" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1612789789602" />
+    <state x="554" y="135" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1613565811485" />
+    <state x="490" y="140" width="1200" height="848" key="DiffContextDialog" timestamp="1612859792145">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="490" y="140" width="1200" height="848" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612859792145" />
     <state x="1191" y="303" key="FileChooserDialogImpl" timestamp="1612408688211">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1191" y="303" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1612408688211" />
-    <state width="1340" height="208" key="GridCell.Tab.0.bottom" timestamp="1612777365808">
+    <state width="1340" height="284" key="GridCell.Tab.0.bottom" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1612777365808" />
-    <state width="1340" height="208" key="GridCell.Tab.0.center" timestamp="1612777365808">
+    <state width="1340" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state width="1340" height="284" key="GridCell.Tab.0.center" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="208" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1612777365808" />
-    <state width="1340" height="208" key="GridCell.Tab.0.left" timestamp="1612777365807">
+    <state width="1340" height="284" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state width="1340" height="284" key="GridCell.Tab.0.left" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="208" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1612777365807" />
-    <state width="1340" height="208" key="GridCell.Tab.0.right" timestamp="1612777365808">
+    <state width="1340" height="284" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state width="1340" height="284" key="GridCell.Tab.0.right" timestamp="1613564321370">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1340" height="208" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1612777365808" />
-    <state x="1121" y="293" key="MultipleFileMergeDialog" timestamp="1612432711505">
+    <state width="1340" height="284" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1613564321370" />
+    <state x="813" y="283" key="IDE.errors.dialog" timestamp="1612837679248">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1121" y="293" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612432711505" />
-    <state x="282" y="196" key="SettingsEditor" timestamp="1612432926483">
+    <state x="813" y="283" key="IDE.errors.dialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612837679248" />
+    <state x="368" y="83" key="MergeDialog" timestamp="1612790490190">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="282" y="196" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1612432926483" />
-    <state x="511" y="260" key="Vcs.Push.Dialog.v2" timestamp="1612522985290">
+    <state x="368" y="83" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612790490190" />
+    <state x="1121" y="293" key="MultipleFileMergeDialog" timestamp="1612790490239">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="511" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612522985290" />
+    <state x="1121" y="293" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612790490239" />
+    <state x="540" y="224" key="SettingsEditor" timestamp="1612871374749">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="540" y="224" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1612871374749" />
+    <state x="511" y="260" key="Vcs.Push.Dialog.v2" timestamp="1612860967378">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="511" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1612860967378" />
+    <state x="947" y="327" key="git4idea.merge.GitPullDialog" timestamp="1612837673736">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="947" y="327" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612837673736" />
     <state x="1271" y="447" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1612432277347">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1271" y="447" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1612432277347" />
-    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1612774952535">
+    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup" timestamp="1613546342294">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1612774952535" />
+    <state x="457" y="267" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1613546342294" />
   </component>
 </project>

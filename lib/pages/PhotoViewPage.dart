@@ -1,5 +1,6 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class PhotoViewPage extends StatelessWidget{
   const PhotoViewPage({
@@ -28,6 +29,11 @@ class PhotoViewPage extends StatelessWidget{
                 maxScale: 3.0,
                 animationMaxScale: 3.5,
                 speed: 1.0,
+              );
+            },
+            onDoubleTap: (ExtendedImageGestureState state){
+              state.handleDoubleTap(
+                scale: 2.0
               );
             },
           ),

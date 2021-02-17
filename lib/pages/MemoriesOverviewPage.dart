@@ -7,7 +7,7 @@ class MemoriesOverviewPage extends StatelessWidget{
   List coverImages = [
     {
       "title": "Cat Memory",
-      "imageUrl": "res/images/background.jpg"
+      "imageUrl": "res/images/background.jpg",
     },
     {
       "title": "Universe Adventure",
@@ -62,6 +62,7 @@ class MemoriesOverviewPage extends StatelessWidget{
               ),
               DecoratedBox(
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
                       gradient: LinearGradient(
                         colors: [Color.fromRGBO(0,0,0, 0.1),Color.fromRGBO(0, 0, 0, 0.5)],
                         begin: Alignment.topCenter,
