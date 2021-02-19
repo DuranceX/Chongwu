@@ -6,21 +6,37 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-    </expand>
-    <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:dev" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="Merge branch 'Cardy' of https://github.com/DuranceX/Chongwu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;lib/pages/DioTestPage.dart" />
+    <list default="true" id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="mac测试">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -40,26 +56,64 @@
     <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="04b5dda3-f52f-41f6-81a6-1d58db0b8df8" name="Default Changelist" comment="" />
+      <changelist id="c192f7a8-d1cf-4ea3-9455-26af386a7713" name="Default Changelist" comment="Merge branch 'Cardy' of https://github.com/DuranceX/Chongwu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;lib/pages/DioTestPage.dart" />
       <created>1613721207021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613721207021</updated>
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'Cardy' of https://github.com/DuranceX/Chongwu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;lib/pages/DioTestPage.dart">
+      <created>1613721994733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613721994733</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/Chongwu" />
     </ignored-roots>
+    <MESSAGE value="Merge branch 'Cardy' of https://github.com/DuranceX/Chongwu&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;lib/pages/DioTestPage.dart" />
+    <MESSAGE value="mac测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="mac测试" />
   </component>
   <component name="WindowStateProjectService">
     <state x="829" y="318" key="FileChooserDialogImpl" timestamp="1613721271164">
@@ -87,5 +141,25 @@
     </state>
     <state x="550" y="207" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1613721227432" />
     <state x="413" y="172" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1613721958776" />
+    <state x="315" y="180" key="Vcs.Push.Dialog.v2" timestamp="1613723517493">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="315" y="180" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1613723517493" />
+    <state x="498" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613723814635">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="498" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1613723814635" />
+    <state x="439" y="160" key="git4idea.branch.GitSmartOperationDialog" timestamp="1613723401658">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="439" y="160" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.875@0.25.1440.875" timestamp="1613723401658" />
+    <state x="403" y="236" key="git4idea.merge.GitPullDialog" timestamp="1613723759713">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="403" y="236" key="git4idea.merge.GitPullDialog/0.25.1440.875@0.25.1440.875" timestamp="1613723759713" />
+    <state x="380" y="205" width="670" height="676" key="search.everywhere.popup" timestamp="1613722071279">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="380" y="205" width="670" height="676" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1613722071279" />
   </component>
 </project>
