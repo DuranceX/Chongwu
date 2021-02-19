@@ -1,3 +1,4 @@
+import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/pages/SettingPage.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/Texts.dart';
@@ -34,6 +35,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   ];
   String _bodyStr1 = "This is Learning Page";
   String _bodyStr2 = "This is Play Page";
+  OverlayEntry _overlayEntry;
+  bool _flag = false;
 
   @override
   void initState() {
@@ -133,80 +136,276 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             // the App.build method, and use it to set our appbar title.
             title: Text(widget.title,style: TextStyle(color: Colors.white),),
             actions: <Widget>[
-              PopupMenuButton<String>(
-                icon: Icon(MyIcons.menu,size: 30,color: Colors.grey,),
-                onSelected: (String value){
-                  if(value == "Shop"){
-                    Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return new ShopPage();
-                    }));
+              FlatButton(
+                onPressed: (){
+                  if(_flag == true){
+                    _overlayEntry.remove();
+                    _overlayEntry = null;
                   }
-                  else if (value == "Setting"){
-                    Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return new SettingPage();
-                    }));
-                  }
-                  else if (value == "Mine"){
-                    Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return new MinePage();
-                    }));
-                  }
-                  else if (value == "Feedback"){
-                    Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return new FeedbackPage();
-                    }));
-                  }
-                },
-                itemBuilder: (context) {
-                  return [
-                    PopupMenuItem(
-                        value: "Shop",
-                        child: Stack(
-                          children: <Widget>[
-                            Container(
+                  else {
+                    _overlayEntry = OverlayEntry(
+                      builder: (context) =>
+                          Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(top: 75),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black26,
+                                        offset: Offset(1.0, 2.0),
+                                        blurRadius: 4.0,
+                                      )
+                                    ]
+                                ),
                                 child: SizedBox(
-                                  width: width/3,
-                                  height: width/4,
-                                  child: DecoratedBox(
-                                    decoration: BoxDecoration(
-                                      color: Colors.deepOrangeAccent,
-                                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                                    ),
-                                    child: Center(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
+                                  height: 300,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    children: <Widget>[
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
-                                          Icon(Icons.storefront,color: Colors.white,),
-                                          Text(Texts.shop,style: TextStyle(color: Colors.white),)
+                                          Stack(
+                                            children: <Widget>[
+                                              GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return new ShopPage();
+                                                            }));
+                                                    _overlayEntry.remove();
+                                                    _overlayEntry = null;
+                                                    setState(() {
+                                                      _flag = !_flag;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                      child: Center(
+                                                        child: SizedBox(
+                                                          width: width / 3,
+                                                          height: width / 4,
+                                                          child: DecoratedBox(
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.deepOrangeAccent,
+                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                                                            ),
+                                                            child: Center(
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: <Widget>[
+                                                                  Icon(
+                                                                    Icons.storefront,
+                                                                    color: Colors.white,
+                                                                    size: 30,
+                                                                  ),
+                                                                  Text(Texts.shop,
+                                                                    style: TextStyle(
+                                                                      color: Colors.white,
+                                                                      fontSize: 20,
+                                                                      fontWeight: FontWeight.w100,
+                                                                      decoration: TextDecoration.none,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      )
+                                                  )
+                                              )
+                                            ],
+                                          ),
+                                          Container(height: 150, child: VerticalDivider(color: Colors.grey)),
+                                          Stack(
+                                            children: <Widget>[
+                                              GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return new FeedbackPage();
+                                                            }));
+                                                    _overlayEntry.remove();
+                                                    _overlayEntry = null;
+                                                    setState(() {
+                                                      _flag = !_flag;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                      child: Center(
+                                                        child: SizedBox(
+                                                          width: width / 3,
+                                                          height: width / 4,
+                                                          child: DecoratedBox(
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.deepOrangeAccent,
+                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                                                            ),
+                                                            child: Center(
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: <Widget>[
+                                                                  Icon(
+                                                                    Icons.comment,
+                                                                    color: Colors.white,
+                                                                    size: 30,
+                                                                  ),
+                                                                  Text(Texts.feedback,
+                                                                    style: TextStyle(
+                                                                      color: Colors.white,
+                                                                      fontSize: 20,
+                                                                      fontWeight: FontWeight.w100,
+                                                                      decoration: TextDecoration.none,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      )
+                                                  )
+                                              )
+                                            ],
+                                          ),
                                         ],
                                       ),
-                                    ),
+                                      Divider(height: 0,thickness: 1),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: <Widget>[
+                                          Stack(
+                                            children: <Widget>[
+                                              GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return new MinePage();
+                                                            }));
+                                                    _overlayEntry.remove();
+                                                    _overlayEntry = null;
+                                                    setState(() {
+                                                      _flag = !_flag;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                      child: Center(
+                                                        child: SizedBox(
+                                                          width: width / 3,
+                                                          height: width / 4,
+                                                          child: DecoratedBox(
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.deepOrangeAccent,
+                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                                                            ),
+                                                            child: Center(
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: <Widget>[
+                                                                  Icon(
+                                                                    Icons.person,
+                                                                    color: Colors.white,
+                                                                    size: 30,
+                                                                  ),
+                                                                  Text(Texts.mine,
+                                                                    style: TextStyle(
+                                                                      color: Colors.white,
+                                                                      fontSize: 20,
+                                                                      fontWeight: FontWeight.w100,
+                                                                      decoration: TextDecoration.none,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      )
+                                                  )
+                                              )
+                                            ],
+                                          ),
+                                          Container(height: 150, child: VerticalDivider(color: Colors.grey)),
+                                          Stack(
+                                            children: <Widget>[
+                                              GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return new SettingPage();
+                                                            }));
+                                                    _overlayEntry.remove();
+                                                    _overlayEntry = null;
+                                                    setState(() {
+                                                      _flag = !_flag;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                      child: Center(
+                                                        child: SizedBox(
+                                                          width: width / 3,
+                                                          height: width / 4,
+                                                          child: DecoratedBox(
+                                                            decoration: BoxDecoration(
+                                                              color: Colors.deepOrangeAccent,
+                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                                                            ),
+                                                            child: Center(
+                                                              child: Column(
+                                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                                children: <Widget>[
+                                                                  Icon(
+                                                                    Icons.settings,
+                                                                    color: Colors.white,
+                                                                    size: 30,
+                                                                  ),
+                                                                  Text(Texts.setting,
+                                                                    style: TextStyle(
+                                                                      color: Colors.white,
+                                                                      fontSize: 20,
+                                                                      fontWeight: FontWeight.w100,
+                                                                      decoration: TextDecoration.none,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      )
+                                                  )
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                )
-                            )
-                          ],
-                        )
-                    ),
-                    PopupMenuItem(
-                      value: "Mine",
-                      child: Text(
-                        Texts.mine,
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: "Feedback",
-                      child: Text(
-                        Texts.feedback,
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: "Setting",
-                      child: Text(
-                        Texts.setting
-                      )
-                    ),
-                  ];
+                                ),
+                              ),
+                              Expanded(child: GestureDetector(onTap: () {
+                                _overlayEntry.remove();
+                                _overlayEntry = null;
+                                setState(() {
+                                  _flag = !_flag;
+                                });
+                              })),
+                            ],
+                          ),
+                    );
+                    Overlay.of(context).insert(_overlayEntry);
+                  }
+                  setState(() {
+                    _flag = !_flag;
+                  });
                 },
+                child: Icon(MyIcons.menu,color: Colors.grey,),
               )
             ],
           ),
