@@ -35,6 +35,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   ];
   String _bodyStr1 = "This is Learning Page";
   String _bodyStr2 = "This is Play Page";
+
+  //4个跳转按钮相关
   OverlayEntry _overlayEntry;
   bool _flag = false;
 
