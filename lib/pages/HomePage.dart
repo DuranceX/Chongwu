@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 75),
+                                margin: EdgeInsets.only(top: 100),
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     boxShadow: [

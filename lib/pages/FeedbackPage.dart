@@ -1,4 +1,5 @@
 import 'package:chongwu/Test/DioTestPage.dart';
+import 'package:chongwu/Test/NewSettingPage.dart';
 import 'package:chongwu/Test/OverlayDemo.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/Texts.dart';
@@ -113,6 +114,18 @@ class FeedbackPageState extends State<FeedbackPage>{
                                 MaterialPageRoute(
                                     builder: (context){
                                       return PopupMenuTestPage();
+                                    }
+                                )
+                            );
+                          },
+                        ),
+                        RaisedButton(
+                          child: Text("New SettingPage"),
+                          onPressed: (){
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context){
+                                      return SettingPage();
                                     }
                                 )
                             );

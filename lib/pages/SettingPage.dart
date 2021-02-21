@@ -1,13 +1,8 @@
 import 'dart:convert';
 
-import 'package:chongwu/pages/DemoFlowPopMenu.dart';
 import 'package:chongwu/values/Texts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'FeedbackPage.dart';
-import 'MinePage.dart';
-import 'ShopPage.dart';
 
 class SettingPage extends StatefulWidget{
   SettingPageState createState() => SettingPageState();
