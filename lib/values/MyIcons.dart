@@ -18,4 +18,16 @@ class MyIcons{
     fontFamily: "MyIcon",
     matchTextDirection: true
   );
+
+  static const IconData fishColor = const IconData(
+    0xe729,
+    fontFamily: "MyIcon",
+    matchTextDirection: true
+  );
+
+  static const IconData fish = const IconData(
+    0xe67d,
+    fontFamily: "MyIcon",
+    matchTextDirection: true
+  );
 }

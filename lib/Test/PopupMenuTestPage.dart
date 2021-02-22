@@ -1,8 +1,8 @@
 import 'package:chongwu/pages/FeedbackPage.dart';
 import 'package:chongwu/pages/MinePage.dart';
-import 'package:chongwu/pages/SettingPage.dart';
+import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/archive/SettingPage.dart';
 import 'package:chongwu/pages/ShopPage.dart';
-import 'package:chongwu/values/Texts.dart';
+import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -89,7 +89,7 @@ class PopupMenuTestPageState extends State<PopupMenuTestPage>{
                                                             color: Colors.white,
                                                             size: 30,
                                                           ),
-                                                          Text(Texts.shop,
+                                                          Text(MyTexts.shop,
                                                             style: TextStyle(
                                                               color: Colors.white,
                                                               fontSize: 20,
@@ -142,7 +142,7 @@ class PopupMenuTestPageState extends State<PopupMenuTestPage>{
                                                                 color: Colors.white,
                                                                 size: 30,
                                                               ),
-                                                              Text(Texts.feedback,
+                                                              Text(MyTexts.feedback,
                                                                 style: TextStyle(
                                                                   color: Colors.white,
                                                                   fontSize: 20,
@@ -200,7 +200,7 @@ class PopupMenuTestPageState extends State<PopupMenuTestPage>{
                                                                 color: Colors.white,
                                                                 size: 30,
                                                               ),
-                                                              Text(Texts.mine,
+                                                              Text(MyTexts.mine,
                                                                 style: TextStyle(
                                                                   color: Colors.white,
                                                                   fontSize: 20,
@@ -253,7 +253,7 @@ class PopupMenuTestPageState extends State<PopupMenuTestPage>{
                                                                 color: Colors.white,
                                                                 size: 30,
                                                               ),
-                                                              Text(Texts.setting,
+                                                              Text(MyTexts.setting,
                                                                 style: TextStyle(
                                                                   color: Colors.white,
                                                                   fontSize: 20,

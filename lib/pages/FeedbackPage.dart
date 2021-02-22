@@ -1,8 +1,9 @@
 import 'package:chongwu/Test/DioTestPage.dart';
-import 'package:chongwu/Test/NewSettingPage.dart';
+import 'package:chongwu/Test/NewShopPage.dart';
+import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/pages/SettingPage.dart';
 import 'package:chongwu/Test/OverlayDemo.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
-import 'package:chongwu/values/Texts.dart';
+import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class FeedbackPageState extends State<FeedbackPage>{
           ),
           toolbarHeight: 40,
           title: Text(
-            Texts.feedback,
+            MyTexts.feedback,
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
@@ -120,17 +121,17 @@ class FeedbackPageState extends State<FeedbackPage>{
                           },
                         ),
                         RaisedButton(
-                          child: Text("New SettingPage"),
+                          child: Text("New ShopPage"),
                           onPressed: (){
                             Navigator.of(context).push(
                                 MaterialPageRoute(
                                     builder: (context){
-                                      return SettingPage();
+                                      return ShopPage();
                                     }
                                 )
                             );
                           },
-                        )
+                        ),
                       ],
                     )
                   ],

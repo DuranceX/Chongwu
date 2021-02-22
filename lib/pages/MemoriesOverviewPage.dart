@@ -1,5 +1,5 @@
 import 'package:chongwu/pages/SingleSeriesPhotosPage.dart';
-import 'package:chongwu/values/Texts.dart';
+import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/material.dart';
 
 class MemoriesOverviewPage extends StatelessWidget{
@@ -103,7 +103,7 @@ class MemoriesOverviewPage extends StatelessWidget{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text(Texts.memoriesOverview,style: TextStyle(color: Colors.white),),
+        title: Text(MyTexts.memoriesOverview,style: TextStyle(color: Colors.white),),
         centerTitle: true,
         toolbarHeight: 40,
         leading: BackButton(color: Colors.white,),

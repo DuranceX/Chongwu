@@ -1,5 +1,5 @@
 import 'package:chongwu/pages/PhotoViewPage.dart';
-import 'package:chongwu/values/Texts.dart';
+import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
   TabController tabController;
   List<Tab> shopTabs = <Tab>[
     Tab(text: "饰品"),
-    Tab(text: "背景")
+    Tab(text: "背景"),
   ];
   String loadingTag = "##loading##";
   List<String> clothesImages = ["##loading##"];
@@ -41,7 +41,7 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(color: Colors.white,),
-        title: Text(Texts.shop,style: TextStyle(color: Colors.white),),
+        title: Text(MyTexts.shop,style: TextStyle(color: Colors.white),),
         centerTitle: true,
         toolbarHeight: 40,
       ),
