@@ -1,9 +1,11 @@
-import 'package:chongwu/Test/PopupMenuTestPage.dart';
+import 'package:chongwu/pages/MemoriesOverviewPage.dart';
 import 'package:chongwu/pages/SettingPage.dart';
+import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyIcons.dart';
-import 'package:chongwu/values/Texts.dart';
+import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/material.dart';
 
+import 'BackpackPage.dart';
 import 'FeedbackPage.dart';
 import 'MinePage.dart';
 import 'ShopPage.dart';
@@ -51,6 +53,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final width = size.width;
+    final menuWidth = width / 4;
+    final menuHeight = width / 3.2;
+    final menuPhotoHeight = width / 4;
     return Scaffold(
       // appBar: AppBar(
       //   toolbarHeight: 50,
@@ -152,7 +157,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                               Container(
                                 margin: EdgeInsets.only(top: 75),
                                 decoration: BoxDecoration(
-                                    color: Colors.white,
+                                    color: MyColors.orange,
+                                    borderRadius: BorderRadius.circular(15),
                                     boxShadow: [
                                       BoxShadow(
                                         color: Colors.black26,
@@ -163,227 +169,346 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                 ),
                                 child: SizedBox(
                                   height: 300,
+                                  width: width - 20,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: <Widget>[
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
-                                          Stack(
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                  onTap: () {
-                                                    Navigator.push(context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) {
-                                                              return new ShopPage();
-                                                            }));
-                                                    _overlayEntry.remove();
-                                                    _overlayEntry = null;
-                                                    setState(() {
-                                                      _flag = !_flag;
-                                                    });
-                                                  },
-                                                  child: Container(
-                                                      child: Center(
-                                                        child: SizedBox(
-                                                          width: width / 3,
-                                                          height: width / 4,
-                                                          child: DecoratedBox(
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.deepOrangeAccent,
-                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                                                            ),
-                                                            child: Center(
-                                                              child: Column(
-                                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                                children: <Widget>[
-                                                                  Icon(
-                                                                    Icons.storefront,
-                                                                    color: Colors.white,
-                                                                    size: 30,
+                                          //商店
+                                          GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                          return new ShopPage();
+                                                        }));
+                                                _overlayEntry.remove();
+                                                _overlayEntry = null;
+                                                setState(() {
+                                                  _flag = !_flag;
+                                                });
+                                              },
+                                              child: Container(
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                        width: menuWidth,
+                                                        height: menuHeight,
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: menuWidth,
+                                                              height: menuPhotoHeight,
+                                                              child: DecoratedBox(
+                                                                  decoration: BoxDecoration(
+                                                                    color: Colors.deepOrangeAccent,
+                                                                    borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                   ),
-                                                                  Text(Texts.shop,
-                                                                    style: TextStyle(
-                                                                      color: Colors.white,
-                                                                      fontSize: 20,
-                                                                      fontWeight: FontWeight.w100,
-                                                                      decoration: TextDecoration.none,
-                                                                    ),
-                                                                  ),
-                                                                ],
+                                                                  child: ClipRRect(
+                                                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                      child: Image(
+                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        fit: BoxFit.cover,
+                                                                      )
+                                                                  )
                                                               ),
                                                             ),
-                                                          ),
-                                                        ),
-                                                      )
+                                                            Text(
+                                                              MyTexts.shop,
+                                                              style: TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Microsoft YaHei",
+                                                                fontSize: 16,
+                                                                decoration: TextDecoration.none,
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                    ),
                                                   )
                                               )
-                                            ],
                                           ),
-                                          Container(height: 150, child: VerticalDivider(color: Colors.grey)),
-                                          Stack(
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                  onTap: () {
-                                                    Navigator.push(context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) {
-                                                              return new FeedbackPage();
-                                                            }));
-                                                    _overlayEntry.remove();
-                                                    _overlayEntry = null;
-                                                    setState(() {
-                                                      _flag = !_flag;
-                                                    });
-                                                  },
-                                                  child: Container(
-                                                      child: Center(
-                                                        child: SizedBox(
-                                                          width: width / 3,
-                                                          height: width / 4,
-                                                          child: DecoratedBox(
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.deepOrangeAccent,
-                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                                                            ),
-                                                            child: Center(
-                                                              child: Column(
-                                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                                children: <Widget>[
-                                                                  Icon(
-                                                                    Icons.comment,
-                                                                    color: Colors.white,
-                                                                    size: 30,
+                                          //Container(height: 125, child: VerticalDivider(color: Colors.grey,width: 10,)),
+                                          //背包
+                                          GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                          return new BackpackPage();
+                                                        }));
+                                                _overlayEntry.remove();
+                                                _overlayEntry = null;
+                                                setState(() {
+                                                  _flag = !_flag;
+                                                });
+                                              },
+                                              child: Container(
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                        width: menuWidth,
+                                                        height: menuHeight,
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: menuWidth,
+                                                              height: menuPhotoHeight,
+                                                              child: DecoratedBox(
+                                                                  decoration: BoxDecoration(
+                                                                    color: Colors.deepOrangeAccent,
+                                                                    borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                   ),
-                                                                  Text(Texts.feedback,
-                                                                    style: TextStyle(
-                                                                      color: Colors.white,
-                                                                      fontSize: 20,
-                                                                      fontWeight: FontWeight.w100,
-                                                                      decoration: TextDecoration.none,
-                                                                    ),
-                                                                  ),
-                                                                ],
+                                                                  child: ClipRRect(
+                                                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                      child: Image(
+                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        fit: BoxFit.cover,
+                                                                      )
+                                                                  )
                                                               ),
                                                             ),
-                                                          ),
-                                                        ),
-                                                      )
+                                                            Text(
+                                                              MyTexts.backpack,
+                                                              style: TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Microsoft YaHei",
+                                                                fontSize: 16,
+                                                                decoration: TextDecoration.none,
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                    ),
                                                   )
                                               )
-                                            ],
+                                          ),
+                                          //Container(height: 125, child: VerticalDivider(color: Colors.grey)),
+                                          //相册
+                                          GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                          return new MemoriesOverviewPage();
+                                                        }));
+                                                _overlayEntry.remove();
+                                                _overlayEntry = null;
+                                                setState(() {
+                                                  _flag = !_flag;
+                                                });
+                                              },
+                                              child: Container(
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                        width: menuWidth,
+                                                        height: menuHeight,
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: menuWidth,
+                                                              height: menuPhotoHeight,
+                                                              child: DecoratedBox(
+                                                                  decoration: BoxDecoration(
+                                                                    color: Colors.deepOrangeAccent,
+                                                                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                  ),
+                                                                  child: ClipRRect(
+                                                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                      child: Image(
+                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        fit: BoxFit.cover,
+                                                                      )
+                                                                  )
+                                                              ),
+                                                            ),
+                                                            Text(
+                                                              MyTexts.album,
+                                                              style: TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Microsoft YaHei",
+                                                                fontSize: 16,
+                                                                decoration: TextDecoration.none,
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                    ),
+                                                  )
+                                              )
                                           ),
                                         ],
                                       ),
-                                      Divider(height: 0,thickness: 1),
+                                      //Divider(height: 0,thickness: 1),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: <Widget>[
-                                          Stack(
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                  onTap: () {
-                                                    Navigator.push(context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) {
-                                                              return new MinePage();
-                                                            }));
-                                                    _overlayEntry.remove();
-                                                    _overlayEntry = null;
-                                                    setState(() {
-                                                      _flag = !_flag;
-                                                    });
-                                                  },
-                                                  child: Container(
-                                                      child: Center(
-                                                        child: SizedBox(
-                                                          width: width / 3,
-                                                          height: width / 4,
-                                                          child: DecoratedBox(
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.deepOrangeAccent,
-                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                                                            ),
-                                                            child: Center(
-                                                              child: Column(
-                                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                                children: <Widget>[
-                                                                  Icon(
-                                                                    Icons.person,
-                                                                    color: Colors.white,
-                                                                    size: 30,
+                                          //我的
+                                          GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                          return new MinePage();
+                                                        }));
+                                                _overlayEntry.remove();
+                                                _overlayEntry = null;
+                                                setState(() {
+                                                  _flag = !_flag;
+                                                });
+                                              },
+                                              child: Container(
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                        width: menuWidth,
+                                                        height: menuHeight,
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: menuWidth,
+                                                              height: menuPhotoHeight,
+                                                              child: DecoratedBox(
+                                                                  decoration: BoxDecoration(
+                                                                    color: Colors.deepOrangeAccent,
+                                                                    borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                   ),
-                                                                  Text(Texts.mine,
-                                                                    style: TextStyle(
-                                                                      color: Colors.white,
-                                                                      fontSize: 20,
-                                                                      fontWeight: FontWeight.w100,
-                                                                      decoration: TextDecoration.none,
-                                                                    ),
-                                                                  ),
-                                                                ],
+                                                                  child: ClipRRect(
+                                                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                      child: Image(
+                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        fit: BoxFit.cover,
+                                                                      )
+                                                                  )
                                                               ),
                                                             ),
-                                                          ),
-                                                        ),
-                                                      )
+                                                            Text(
+                                                              MyTexts.mine,
+                                                              style: TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Microsoft YaHei",
+                                                                fontSize: 16,
+                                                                decoration: TextDecoration.none,
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                    ),
                                                   )
                                               )
-                                            ],
                                           ),
-                                          Container(height: 150, child: VerticalDivider(color: Colors.grey)),
-                                          Stack(
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                  onTap: () {
-                                                    Navigator.push(context,
-                                                        MaterialPageRoute(
-                                                            builder: (context) {
-                                                              return new SettingPage();
-                                                            }));
-                                                    _overlayEntry.remove();
-                                                    _overlayEntry = null;
-                                                    setState(() {
-                                                      _flag = !_flag;
-                                                    });
-                                                  },
-                                                  child: Container(
-                                                      child: Center(
-                                                        child: SizedBox(
-                                                          width: width / 3,
-                                                          height: width / 4,
-                                                          child: DecoratedBox(
-                                                            decoration: BoxDecoration(
-                                                              color: Colors.deepOrangeAccent,
-                                                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                                                            ),
-                                                            child: Center(
-                                                              child: Column(
-                                                                mainAxisAlignment: MainAxisAlignment.center,
-                                                                children: <Widget>[
-                                                                  Icon(
-                                                                    Icons.settings,
-                                                                    color: Colors.white,
-                                                                    size: 30,
+                                          //Container(height: 125, child: VerticalDivider(color: Colors.grey)),
+                                          //设置
+                                          GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                          return new SettingPage();
+                                                        }));
+                                                _overlayEntry.remove();
+                                                _overlayEntry = null;
+                                                setState(() {
+                                                  _flag = !_flag;
+                                                });
+                                              },
+                                              child: Container(
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                        width: menuWidth,
+                                                        height: menuHeight,
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: menuWidth,
+                                                              height: menuPhotoHeight,
+                                                              child: DecoratedBox(
+                                                                  decoration: BoxDecoration(
+                                                                    color: Colors.deepOrangeAccent,
+                                                                    borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                   ),
-                                                                  Text(Texts.setting,
-                                                                    style: TextStyle(
-                                                                      color: Colors.white,
-                                                                      fontSize: 20,
-                                                                      fontWeight: FontWeight.w100,
-                                                                      decoration: TextDecoration.none,
-                                                                    ),
-                                                                  ),
-                                                                ],
+                                                                  child: ClipRRect(
+                                                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                      child: Image(
+                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        fit: BoxFit.cover,
+                                                                      )
+                                                                  )
                                                               ),
                                                             ),
-                                                          ),
-                                                        ),
-                                                      )
+                                                            Text(
+                                                              MyTexts.setting,
+                                                              style: TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Microsoft YaHei",
+                                                                fontSize: 16,
+                                                                decoration: TextDecoration.none,
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                    ),
                                                   )
                                               )
-                                            ],
+                                          ),
+                                          //Container(height: 125, child: VerticalDivider(color: Colors.grey)),
+                                          //空白——用于测试
+                                          GestureDetector(
+                                              onTap: () {
+                                                Navigator.push(context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) {
+                                                          return new FeedbackPage();
+                                                        }));
+                                                _overlayEntry.remove();
+                                                _overlayEntry = null;
+                                                setState(() {
+                                                  _flag = !_flag;
+                                                });
+                                              },
+                                              child: Container(
+                                                  child: Center(
+                                                    child: SizedBox(
+                                                        width: menuWidth,
+                                                        height: menuHeight,
+                                                        child: Column(
+                                                          crossAxisAlignment: CrossAxisAlignment.center,
+                                                          children: <Widget>[
+                                                            SizedBox(
+                                                              width: menuWidth,
+                                                              height: menuPhotoHeight,
+                                                              child: DecoratedBox(
+                                                                  decoration: BoxDecoration(
+                                                                    color: Colors.deepOrangeAccent,
+                                                                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                  ),
+                                                                  child: ClipRRect(
+                                                                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                                                                      child: Image(
+                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        fit: BoxFit.cover,
+                                                                      )
+                                                                  )
+                                                              ),
+                                                            ),
+                                                            Text(
+                                                              "测试",
+                                                              style: TextStyle(
+                                                                color: Colors.white,
+                                                                fontFamily: "Microsoft YaHei",
+                                                                fontSize: 16,
+                                                                decoration: TextDecoration.none,
+                                                              ),
+                                                            )
+                                                          ],
+                                                        )
+                                                    ),
+                                                  )
+                                              )
                                           ),
                                         ],
                                       ),

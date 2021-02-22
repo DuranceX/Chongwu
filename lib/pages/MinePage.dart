@@ -1,6 +1,6 @@
 import 'package:chongwu/pages/MemoriesOverviewPage.dart';
 import 'package:chongwu/values/MyIcons.dart';
-import 'package:chongwu/values/Texts.dart';
+import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +56,7 @@ class MinePageState extends State<MinePage>{
       appBar: AppBar(
         leading: BackButton(color: Colors.white,),
         toolbarHeight: 40,
-        title: Text(Texts.mine,style: TextStyle(color: Colors.white),),
+        title: Text(MyTexts.mine,style: TextStyle(color: Colors.white),),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
