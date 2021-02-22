@@ -6,6 +6,10 @@
 
     lib
     |
+    |——archive       //旧界面归档
+    |   |
+    |   |——SettingPage.dart     //旧设置界面
+    |
     |——pages         //界面文件夹
     |   |
     |   |——DemoFlowPopMenu.dart //测试功能用
@@ -23,6 +27,14 @@
     |   |——DioTestPage.dart     //Dio库测试
     |   |——OverlayDemo.dart     //自定义菜单案例
     |   |——PopupMenuTestPage.dart  //自定义菜单，即4个主界面选项
+    |   |——NewShopPage.dart     //新商店界面，重置
+    |
+    |——Widget      //自定义组件
+    |   |
+    |   |——BoughtDialog.dart    //确认购买的窗口，含两个按钮和简单信息
+    |   |——BuyGoodsWidget.dart  //购买窗口，包含商品详细信息
+    |   |——Button.dart          //自定义按钮
+    |   |——ShopItemWidget.dart  //商店商品的自定义组件
     |
     |——values       //全局数据文件夹
     |   |

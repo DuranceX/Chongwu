@@ -1,6 +1,7 @@
 import 'package:chongwu/pages/PhotoViewPage.dart';
 import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyIcons.dart';
+import 'package:chongwu/widget/BuyGoodsWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class ShopItemWidget extends StatelessWidget{
   final String imageText;
   final bool bought;
   final int price;
+  OverlayEntry _overlayEntry;
 
   ShopItemWidget({
     @required this.imageUrl,
@@ -30,62 +32,36 @@ class ShopItemWidget extends StatelessWidget{
         children: <Widget>[
           GestureDetector(
             onTap: (){
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    contentPadding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                    content: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxHeight: 175,
-                      ),
-                      child: Column(
+              _overlayEntry = OverlayEntry(
+                builder: (context) =>
+                  Stack(
+                    children: <Widget>[
+                      Column(
                         children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.all(0),
-                            child: InkWell(
-                              child: Image(image: AssetImage(imageUrl),),
-                              onTap: () {
-                                Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (context) {
-                                          return PhotoViewPage(
-                                            image: imageUrl,);
-                                        }
-                                    )
-                                );
-                              },
-                            ),
+                          Expanded(
+                              child: Container(
+                                color: Color.fromRGBO(0, 0, 0, 0.4),
+                                child: GestureDetector(
+                                    onTap: () {
+                                      _overlayEntry.remove();
+                                      _overlayEntry = null;
+                                    }
+                                ),
+                              )
                           ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
-                            child: Center(
-                              child: Text(imageText),
-                            ),
-                          )
                         ],
                       ),
-                    ),
-                    actions: <Widget>[
-                      OutlineButton(child: Text('取消',style: TextStyle(fontSize: 18),),onPressed: (){Navigator.pop(context);},),
-                      OutlineButton(child: Text('购买',style: TextStyle(fontSize: 18),),onPressed: (){
-                        showDialog(
-                            context: context,
-                            builder: (context){
-                              return AlertDialog(
-                                  content: Text("确认购买"),
-                                  actions: <Widget>[
-                                    OutlineButton(child: Text('取消',style: TextStyle(fontSize: 18),),onPressed: (){Navigator.pop(context);},),
-                                    OutlineButton(child: Text('购买',style: TextStyle(fontSize: 18),),onPressed: (){}),
-                                  ]
-                              );
-                            }
-                        );
-                      },),
+                      BuyGoodsWidget(
+                        imageUrl: imageUrl,
+                        imageText: imageText,
+                        bought: bought,
+                        price: 800,
+                        overlayEntry: _overlayEntry,
+                      ),
                     ],
-                  );
-                }
+                  )
               );
+              Overlay.of(context).insert(_overlayEntry);
             },
             child: Column(
               children: <Widget>[

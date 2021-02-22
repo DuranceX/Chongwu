@@ -120,9 +120,9 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
                         ),
                         itemCount: backgroundImages.length,
                         itemBuilder: (context,index){
-                          if(clothesImages[index] == loadingTag){
-                            if(clothesImages.length-1 < 100){
-                              clothesRetrieveImages();
+                          if(backgroundImages[index] == loadingTag){
+                            if(backgroundImages.length-1 < 100){
+                              backgroundRetrieveImages();
                               return Container(
                                 padding: EdgeInsets.all(16),
                                 alignment: Alignment.center,
@@ -142,7 +142,7 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
                           }
                           return ShopItemWidget(
                             imageUrl: backgroundImages[index],
-                            imageText: "background" + index.toString(),
+                            imageText: "背景" + index.toString(),
                             bought: boughts[index],
                             price: 3000,
                           );
@@ -204,9 +204,9 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
                         ),
                         itemCount: backgroundImages.length,
                         itemBuilder: (context,index){
-                          if(clothesImages[index] == loadingTag){
-                            if(clothesImages.length-1 < 100){
-                              clothesRetrieveImages();
+                          if(backgroundImages[index] == loadingTag){
+                            if(backgroundImages.length-1 < 100){
+                              backgroundRetrieveImages();
                               return Container(
                                 padding: EdgeInsets.all(16),
                                 alignment: Alignment.center,
