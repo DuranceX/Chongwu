@@ -7,8 +7,6 @@
     lib
     |
     |——archive       //旧界面归档
-    |   |
-    |   |——SettingPage.dart     //旧设置界面
     |
     |——pages         //界面文件夹
     |   |
@@ -35,6 +33,8 @@
     |   |——BuyGoodsWidget.dart  //购买窗口，包含商品详细信息
     |   |——Button.dart          //自定义按钮
     |   |——ShopItemWidget.dart  //商店商品的自定义组件
+    |   |——addCreditDialog.dart //充值弹窗
+    |   |——addCustomCreditDialog.dart  //自定义金额的充值弹窗
     |
     |——values       //全局数据文件夹
     |   |
