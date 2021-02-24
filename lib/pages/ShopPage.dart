@@ -3,7 +3,7 @@ import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/MyTexts.dart';
 import 'package:chongwu/widget/ShopItemWidget.dart';
-import 'package:chongwu/widget/addCreditDialog.dart';
+import 'package:chongwu/widget/AddCreditDialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

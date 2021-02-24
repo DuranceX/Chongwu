@@ -1,5 +1,5 @@
 import 'package:chongwu/values/MyColors.dart';
-import 'package:chongwu/widget/addCustomCreditDialog.dart';
+import 'package:chongwu/widget/AddCustomCreditDialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
