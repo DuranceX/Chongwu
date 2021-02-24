@@ -1,6 +1,7 @@
 import 'package:chongwu/values/MyColors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AddCustomCreditDialog extends StatelessWidget{
   @override
@@ -26,6 +27,11 @@ class AddCustomCreditDialog extends StatelessWidget{
                 SizedBox(
                   width: 80,
                   child: TextField(
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp('[0-9.]')),
+                      FilteringTextInputFormatter.deny(""),
+                      LengthLimitingTextInputFormatter(6)
+                    ],
                     scrollPadding: EdgeInsets.all(0),
                     style: TextStyle(
                       color: MyColors.black,
@@ -54,7 +60,6 @@ class AddCustomCreditDialog extends StatelessWidget{
             ),
             SizedBox(height: 10,),
             Divider(thickness: 1,),
-            //SizedBox(height: 10,),
             GestureDetector(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
