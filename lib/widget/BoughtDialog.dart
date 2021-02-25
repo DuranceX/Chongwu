@@ -8,11 +8,13 @@ class BoughtDialog extends StatelessWidget{
   final String imageText;
   final int price;
   OverlayEntry boughtDialog;
+  OverlayEntry superOverlay;
 
   BoughtDialog({
     @required this.imageText,
     @required this.price,
     @required this.boughtDialog,
+    this.superOverlay,
   });
 
   @override
@@ -65,22 +67,6 @@ class BoughtDialog extends StatelessWidget{
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
-                            // RaisedButton(
-                            //   child: Center(
-                            //     child: Text(
-                            //       "取消",
-                            //       style: TextStyle(
-                            //         color: Colors.white,
-                            //         fontSize: 16
-                            //       ),
-                            //     ),
-                            //   ),
-                            //   color: Colors.grey,
-                            //   onPressed: (){
-                            //     boughtDialog.remove();
-                            //     boughtDialog = null;
-                            //   }
-                            // ),
                             Button(
                               "取消",
                               (){
@@ -93,7 +79,28 @@ class BoughtDialog extends StatelessWidget{
                               shadowColor: Colors.black38
                             ),
                             Button(
-                              "确定", (){},
+                              "确定",
+                              (){
+                                boughtDialog.remove();
+                                boughtDialog = null;
+                                superOverlay.remove();
+                                superOverlay = null;
+                                showDialog(
+                                  context: context,
+                                  child: SimpleDialog(
+                                    children: <Widget>[
+                                      Center(
+                                        child: Text(
+                                          "购买成功！",
+                                          style: TextStyle(
+                                            fontSize: 16
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                );
+                              },
                               height:width/10-5,
                               width: width/4
                             )

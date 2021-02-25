@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'BoughtDialog.dart';
 
-class BuyGoodsWidget extends StatelessWidget{
+class SetItemWidget extends StatelessWidget{
 
   final String imageUrl;
   final String imageText;
@@ -14,7 +14,7 @@ class BuyGoodsWidget extends StatelessWidget{
   OverlayEntry overlayEntry;
   OverlayEntry _boughtDialog;
 
-  BuyGoodsWidget({
+  SetItemWidget({
     @required this.imageUrl,
     @required this.imageText,
     @required this.bought,
@@ -148,16 +148,16 @@ class BuyGoodsWidget extends StatelessWidget{
               )
             ]
         ),
-        child: Center(
-          child: SizedBox(
-            height: 30,
+        child: SizedBox(
+          height: 30,
+          child: Center(
             child: Text(
-              "已拥有",
+              "未拥有",
               style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                decoration: TextDecoration.none
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  decoration: TextDecoration.none
               ),
             ),
           )
@@ -180,57 +180,24 @@ class BuyGoodsWidget extends StatelessWidget{
         ),
         child: GestureDetector(
           child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  height: 30,
-                  child: Row(
-                    children: <Widget>[
-                      Text(
-                        price.toString(),
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          decoration: TextDecoration.none,
-                        ),
-                      ),
-                      Icon(MyIcons.fish, color: Colors.white,),
-                    ],
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                height: 30,
+                child: Center(
+                  child: Text(
+                    "放置",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      decoration: TextDecoration.none,
+                    ),
                   ),
                 )
-              ]
+              ),
+            ]
           ),
-          onTap: () {
-            _boughtDialog = OverlayEntry(
-              builder: (context) =>
-                Stack(
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Expanded(
-                            child: Container(
-                              color: Color.fromRGBO(0, 0, 0, 0.4),
-                              child: GestureDetector(
-                                onTap: () {
-                                  _boughtDialog.remove();
-                                  _boughtDialog = null;
-                                }
-                              ),
-                            )
-                        ),
-                      ],
-                    ),
-                    BoughtDialog(
-                      imageText: imageText,
-                      price: price,
-                      boughtDialog: _boughtDialog,
-                      superOverlay: overlayEntry,
-                    ),
-                  ],
-                ),
-            );
-            Overlay.of(context).insert(_boughtDialog);
-          },
         ),
       );
     }

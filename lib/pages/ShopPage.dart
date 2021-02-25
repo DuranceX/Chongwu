@@ -327,16 +327,16 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
     Future.delayed(Duration(milliseconds: 1000)).then((e){
       setState(() {
         clothesImages.insertAll(clothesImages.length-1, [
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
         ]);
         for(int i=0;i<10;i++) {
           clothesNames.addAll([

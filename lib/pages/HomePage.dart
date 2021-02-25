@@ -102,7 +102,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           TabBarView(
               controller: tabController,
               children: <Widget>[
-                ConstrainedBox(                                   //Learn页面的内容
+                //Learn页面的内容
+                ConstrainedBox(
                     constraints: BoxConstraints(
                       minWidth: double.infinity,
                     ),
@@ -117,7 +118,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       child: Text(_bodyStr1,textScaleFactor: 2.0,style: TextStyle(color: Colors.white),),
                     )
                 ),
-                ConstrainedBox(                                 //Play页面的内容
+                //Play页面的内容
+                ConstrainedBox(
                     constraints: BoxConstraints(
                       minWidth: double.infinity,
                     ),
@@ -209,7 +211,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -264,7 +266,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -319,7 +321,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -379,7 +381,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -434,7 +436,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -489,7 +491,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
