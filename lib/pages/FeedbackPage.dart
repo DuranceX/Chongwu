@@ -1,7 +1,5 @@
 import 'package:chongwu/Test/DioTestPage.dart';
-import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/pages/ShopPage.dart';
-import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/pages/SettingPage.dart';
-import 'package:chongwu/Test/OverlayDemo.dart';
+import 'ShopPage.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';
