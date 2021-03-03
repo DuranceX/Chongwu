@@ -1,4 +1,5 @@
 import 'package:chongwu/Test/DioTestPage.dart';
+import 'package:chongwu/Test/MinePage.dart';
 import 'ShopPage.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
@@ -119,12 +120,12 @@ class FeedbackPageState extends State<FeedbackPage>{
                           },
                         ),
                         RaisedButton(
-                          child: Text("New ShopPage"),
+                          child: Text("New MinePage"),
                           onPressed: (){
                             Navigator.of(context).push(
                                 MaterialPageRoute(
                                     builder: (context){
-                                      return ShopPage();
+                                      return MinePage();
                                     }
                                 )
                             );
