@@ -27,28 +27,33 @@ class RadiusLinearProcess extends StatelessWidget {
   final double value;
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final sysWidth = size.width;
+    final sysHeight = 10;
     return Container(
-        width: width ?? 100,
-        height: height ?? 10,
+        width: width ?? sysWidth,
+        height: height ?? sysHeight,
         child: Stack(
           children: <Widget>[
             Container(
-              width: width ?? 100,
-              height: height ?? 10,
+              width: width ?? sysWidth,
+              height: height ?? sysHeight,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(
-                      Radius.circular(height ?? 10)),
+                      Radius.circular(height ?? sysHeight)),
                   color: bgColor ?? Colors.blue),
             ),
             Container(
+              height: height ?? sysHeight,
+              width: width*value ?? 0.5,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(
-                      Radius.circular(height ?? 10)),
+                      Radius.circular(height ?? sysHeight)),
                   color: frColor ?? Colors.lightBlueAccent),
-              child: new AspectRatio(
-                aspectRatio:
-                width != null && height != null && value!=null ? value*width / height : value*(10),
-              ),
+              // child: new AspectRatio(
+              //   aspectRatio: 1
+              //   //width != null && height != null && value!=null ? value*sysWidth / height: value*(sysHeight),
+              // ),
             ),
           ],
         ));
