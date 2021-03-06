@@ -85,20 +85,22 @@ class BoughtDialog extends StatelessWidget{
                                 boughtDialog = null;
                                 superOverlay.remove();
                                 superOverlay = null;
-                                showDialog(
+                                showGeneralDialog(
                                   context: context,
-                                  child: SimpleDialog(
-                                    children: <Widget>[
-                                      Center(
-                                        child: Text(
-                                          "购买成功！",
-                                          style: TextStyle(
-                                            fontSize: 16
-                                          ),
+                                  barrierDismissible: true,
+                                  pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation){
+                                    return Center(
+                                      child: Container(
+                                        height: 100,
+                                        width: 200,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15)
                                         ),
-                                      )
-                                    ],
-                                  )
+                                        child: Text("购买成功！"),
+                                      ),
+                                    );
+                                  }
                                 );
                               },
                               height:width/10-5,

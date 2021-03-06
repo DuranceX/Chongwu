@@ -189,7 +189,9 @@ class AddCreditDialog extends StatelessWidget{
                       Navigator.pop(context);
                       showDialog(
                         context: context,
-                        child: AddCustomCreditDialog(),
+                        builder: (context){
+                          return AddCustomCreditDialog().build(context);
+                        },
                       );
                     },
                   )

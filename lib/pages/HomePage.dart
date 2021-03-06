@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     final menuWidth = width / 4;
     final menuHeight = width / 3.2;
     final menuPhotoHeight = width / 4;
+    final padding = MediaQuery.of(context).padding.top;
     return Scaffold(
       // appBar: AppBar(
       //   toolbarHeight: 50,
@@ -157,7 +158,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 75),
+                                margin: EdgeInsets.only(top: padding + 40),
                                 decoration: BoxDecoration(
                                     color: MyColors.orange,
                                     borderRadius: BorderRadius.circular(15),

@@ -3,6 +3,7 @@ import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/MyTexts.dart';
 import 'package:chongwu/widget/RadiusLinearProcess.dart';
+import 'package:chongwu/widget/WeeklyBarCharts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -18,6 +19,9 @@ class MinePageState extends State<MinePage>{
   int finishedMission = 5;
   int totalMission = 17;
   String avatarUrl = "res/images/dog.png";
+  List<double> dayTime = [
+    1, 1.5, 2.6, 3.8, 1.5, 2.3, 2.8
+  ];
 
   @override
   void initState() {
@@ -351,7 +355,7 @@ class MinePageState extends State<MinePage>{
                           RadiusLinearProcess(
                             value: minutes/1440,
                             height: 20,
-                            width: width-40,
+                            width: width-80,
                             frColor: MyColors.orange,
                             bgColor: Colors.white,
                           ),
@@ -361,11 +365,11 @@ class MinePageState extends State<MinePage>{
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             mainAxisSize: MainAxisSize.max,
                             children: <Widget>[
-                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("0 ")],),flex: 1,),
-                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("2 ")],),flex: 1,),
-                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("4 ")],),flex: 1,),
-                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("6 ")],),flex: 1,),
-                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("8 ")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("0")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("2")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("4")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("6")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("8")],),flex: 1,),
                               Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("10")],),flex: 1,),
                               Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("12")],),flex: 1,),
                               Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("14")],),flex: 1,),
@@ -427,26 +431,40 @@ class MinePageState extends State<MinePage>{
                       )
                     )
                   ),
+                  //第五个卡片，柱状图
                   Card(
-                      margin: EdgeInsets.fromLTRB(5, 5, 10, 10),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-                      child: Container(
-                          width: (width-70)/2,
-                          height: (width-70)/2,
-                          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Container(
-                                  margin: EdgeInsets.only(left: 10),
-                                  child: Font16("本周 - 时间")
+                    margin: EdgeInsets.fromLTRB(5, 5, 10, 10),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    child: Container(
+                      width: (width-70)/2,
+                      height: (width-70)/2,
+                      margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                              margin: EdgeInsets.fromLTRB(10,0,0,10),
+                              child: Font16("本周 - 时间")
+                          ),
+                          Container(
+                            child: Center(
+                              child: Container(
+                                child: WeeklyBarCharts(
+                                  dayTime,
+                                  width: (width-90)/2,
+                                  height: (width-140)/2,
+                                  barWidth: 13,
+                                  tooltipBgColor: MyColors.grey,
+                                )
                               )
-                            ],
+                            ),
                           )
+                        ],
                       )
+                    )
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

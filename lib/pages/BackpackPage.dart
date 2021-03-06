@@ -92,7 +92,9 @@ class BackpackPageState extends State<BackpackPage> with SingleTickerProviderSta
                     onTap: (){
                       showDialog(
                         context: context,
-                        child: AddCreditDialog(),
+                        builder: (context){
+                          return AddCreditDialog().build(context);
+                        },
                       );
                     },
                   )

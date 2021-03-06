@@ -91,7 +91,9 @@ class ShopPageState extends State<ShopPage> with SingleTickerProviderStateMixin{
                 onTap: (){
                   showDialog(
                     context: context,
-                    child: AddCreditDialog(),
+                    builder: (context){
+                      return AddCreditDialog().build(context);
+                    },
                   );
                 },
               )
