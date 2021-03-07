@@ -1,7 +1,6 @@
-import 'package:chongwu/pages/MemoriesOverviewPage.dart';
 import 'package:chongwu/values/MyColors.dart';
-import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/MyTexts.dart';
+import 'package:chongwu/widget/CustomLineChart.dart';
 import 'package:chongwu/widget/RadiusLinearProcess.dart';
 import 'package:chongwu/widget/WeeklyBarCharts.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,21 +11,48 @@ class MinePage extends StatefulWidget{
   MinePageState createState() => MinePageState();
 }
 
-class MinePageState extends State<MinePage>{
+class MinePageState extends State<MinePage> with SingleTickerProviderStateMixin{
 
+  int minutes;
+  DateTime now;
   String username = "丽香";
   int days = 25;
   int finishedMission = 5;
   int totalMission = 17;
   String avatarUrl = "res/images/dog.png";
+  TabController _monthTabController;
+
   List<double> dayTime = [
     1, 1.5, 2.6, 3.8, 1.5, 2.3, 2.8
+  ];
+
+  //最多5个自定义标签
+  List<double> _monthlyAllTime = [1, 1.5, 2, 3.8, 1.5, 2.3, 2.8];
+  List<List<double>> _tagTime = [];
+
+  List<String> tags = ["工作","学习", "休闲"];
+  List<Tab> tagTabs = [
+    Tab(text: "全部",),
   ];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+
+
+    this.now = new DateTime.now();
+    this.minutes = now.hour*60+now.minute;
+
+    _tagTime=[
+      [1, 1.5, 1, 3.8, 3.5, 2.3, 2.8],
+      [1, 0, 2.6, 3.8, 0, 2.3, 2.8],
+      [1, 1.5, 0, 3.8, 1.5, 2.3, 2.8],
+    ];
+
+    setTagTabs();
+
+    _monthTabController = TabController(length: tagTabs.length, vsync: this);
   }
 
   @override
@@ -39,8 +65,6 @@ class MinePageState extends State<MinePage>{
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final width = size.width;
-    DateTime now = new DateTime.now();
-    int minutes = now.hour*60+now.minute;
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
@@ -465,10 +489,82 @@ class MinePageState extends State<MinePage>{
                   ),
                 ],
               ),
+              //第六个卡片，月时间
+              Card(
+                  margin: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Font16("本月"),
+                            Container(
+                              margin: EdgeInsets.symmetric(vertical: 5),
+                              width: 200,
+                              height: 25,
+                              child: TabBar(
+                                isScrollable: true,
+                                labelColor: Colors.white,
+                                unselectedLabelColor: Colors.black,
+                                controller: this._monthTabController,
+                                indicator: BoxDecoration(
+                                  color: MyColors.deepOrange,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                tabs: tagTabs,
+                              ),
+                            )
+                          ],
+                        )
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        height: width/3,
+                        child: TabBarView(
+                          controller: this._monthTabController,
+                          children: getLineCharts(tagTabs.length-1,width-60)
+                        ),
+                      )
+                    ],
+                  )
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  /// 动态获取折线图
+  /// @param n:标签的个数
+  List<Widget> getLineCharts(int n, double width){
+    //"全部“标签不可少
+    List<Widget> lists = [
+      CustomLineChart(
+        times: _monthlyAllTime,
+        width: width,
+      )
+    ];
+    for(int i=0;i<n;i++){
+      lists.add(
+        CustomLineChart(
+          times: _tagTime[i],
+          width: width,
+        )
+      );
+    }
+    return lists;
+  }
+
+  /// 设置标签项
+  void setTagTabs(){
+    for(int i=0;i<tags.length;i++){
+      tagTabs.add(
+        Tab(text: tags[i],)
+      );
+    }
   }
 }

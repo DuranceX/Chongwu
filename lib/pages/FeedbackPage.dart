@@ -1,6 +1,6 @@
-import 'package:chongwu/Test/BarChartTest.dart';
 import 'package:chongwu/Test/DioTestPage.dart';
 import 'package:chongwu/Test/MinePage.dart';
+import 'package:chongwu/widget/LineChartTest.dart';
 import 'ShopPage.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
@@ -127,7 +127,6 @@ class FeedbackPageState extends State<FeedbackPage>{
                       ),
                     )
                 ),
-                BarChartSample1(),
               ]
           ),
         )
