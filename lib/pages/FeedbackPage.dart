@@ -1,4 +1,4 @@
-import 'package:chongwu/Test/MinePage.dart';
+import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/pages/MinePage.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';

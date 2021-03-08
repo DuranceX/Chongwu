@@ -1,5 +1,5 @@
 import 'package:chongwu/pages/FeedbackPage.dart';
-import 'package:chongwu/pages/MinePage.dart';
+import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/archive/MinePage.dart';
 import 'package:chongwu/pages/SettingPage.dart';
 import 'package:chongwu/pages/ShopPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
