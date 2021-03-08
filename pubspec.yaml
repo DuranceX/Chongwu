@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.0
   extended_image: ^1.5.0
   dio: ^3.0.10
+  percent_indicator: ^2.1.9+1
+  fl_chart: ^0.12.3
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +54,7 @@ flutter:
     - res/images/111.jpg
     - res/images/2.jpg
     - res/images/3.png
+    - res/images/dog.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

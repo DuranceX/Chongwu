@@ -1,50 +1,65 @@
-import 'package:chongwu/pages/MemoriesOverviewPage.dart';
-import 'package:chongwu/values/MyIcons.dart';
+import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyTexts.dart';
+import 'package:chongwu/widget/CustomLineChart.dart';
+import 'package:chongwu/widget/RadiusLinearProcess.dart';
+import 'package:chongwu/widget/WeeklyBarCharts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class MinePage extends StatefulWidget{
   MinePageState createState() => MinePageState();
 }
 
-class MinePageState extends State<MinePage>{
+class MinePageState extends State<MinePage> with TickerProviderStateMixin{
 
-  List<String> memory = [
-    "res/images/111.jpg",
-    "res/images/background.jpg",
-    "##locked##",
-    "res/images/111.jpg",
-    "res/images/background.jpg",
-    "##locked##",
-    "##none##"
+  int minutes;
+  DateTime now;
+  String username = "丽香";
+  int days = 25;
+  int finishedMission = 5;
+  int totalMission = 17;
+  String avatarUrl = "res/images/dog.png";
+  TabController _monthTabController;
+  TabController _yearTabController;
+
+  List<double> dayTime = [
+    1, 1.5, 2.6, 3.8, 1.5, 2.3, 2.8
   ];
 
-  PageController _pageController;
-  var _currPageValue = 0.0;
+  List<double> _monthlyAllTime = [1, 1.5, 2, 3.8, 1.5, 2.3, 2.8];
+  List<List<double>> _tagTime = [];
 
-  //缩放系数
-  double _scaleFactor = 0.8;
-
-  double _height = 220;
+  List<String> tags = ["工作","学习", "休闲"];
+  List<Tab> tagTabs = [
+    Tab(text: "全部",),
+  ];
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _pageController = PageController(viewportFraction: 0.8);
-    _pageController.addListener(() {
-      setState(() {
-        _currPageValue = _pageController.page;
-      });
-    });
+
+
+    this.now = new DateTime.now();
+    this.minutes = now.hour*60+now.minute;
+
+    _tagTime=[
+      [1, 1.5, 1, 3.8, 3.5, 2.3, 2.8],
+      [1, 0, 2.6, 3.8, 0, 2.3, 2.8],
+      [1, 1.5, 0, 3.8, 1.5, 2.3, 2.8],
+    ];
+
+    setTagTabs();
+
+    _monthTabController = TabController(length: tagTabs.length, vsync: this);
+    _yearTabController = TabController(length: tagTabs.length, vsync: this);
   }
 
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    _pageController.dispose();
   }
 
   @override
@@ -54,199 +69,545 @@ class MinePageState extends State<MinePage>{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: MyColors.orange,
         leading: BackButton(color: Colors.white,),
-        toolbarHeight: 40,
         title: Text(MyTexts.mine,style: TextStyle(color: Colors.white),),
         centerTitle: true,
       ),
+      backgroundColor: MyColors.lightGrey,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
             children: <Widget>[
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 40, 0, 20),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: 150,
-                    maxHeight: 150,
-                    minWidth:  150,
-                    maxWidth:  150,
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Colors.grey[350],
-                      borderRadius: BorderRadius.circular(100),
+              //第一个卡片,欢迎卡片
+              Card(
+                margin: EdgeInsets.fromLTRB(10, 20, 10, 10),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    //头像
+                    Container(
+                      margin: EdgeInsets.fromLTRB(20, 20, 10, 20),
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(45),
+                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                      ),
+                      child: SizedBox(
+                        height: 70,
+                        width: 70,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(45)),
+                          child: Image(
+                            image: AssetImage(avatarUrl),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
                     ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(100)),
-                      child: Icon(MyIcons.person,color: Colors.white,size: 100,),
-                      //child: Image(image: AssetImage("res/images/111.jpg"),fit: BoxFit.cover,),
-                    ),
-                  ),
-                ),
+                    SizedBox(width: 10,),
+                    Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Text.rich(
+                            TextSpan(
+                              text: "早上好，",
+                              style: TextStyle(
+                                fontSize: 20
+                              ),
+                              children: <InlineSpan>[
+                                TextSpan(
+                                  text: username,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: MyColors.deepOrange
+                                  )
+                                )
+                              ]
+                            ),
+                          ),
+                          SizedBox(height: 5,),
+                          Text(
+                            "你已经和皮皮一起度过了" + days.toString() + "天",
+                            style: TextStyle(
+                              color: Colors.black38,
+                            ),
+                          )
+                        ],
+                      )
+                    )
+                  ],
+                )
               ),
-              Container(
-                margin: EdgeInsets.only(bottom: 20),
-                child: DefaultTextStyle(
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.black54,
-                    height: 1.5,
+              //第二个卡片，好友卡片
+              Card(
+                margin: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Font16("好友"),
+                          Icon(Icons.person_add_alt,color: MyColors.deepOrange,),
+                        ],
+                      )
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                      child: SizedBox(
+                        width: width-40,
+                        height: width/3.5,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 10),
+                              child: Column(
+                                children: <Widget>[
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        borderRadius: BorderRadius.circular(45),
+                                        border: Border.all(color: MyColors.deepOrange,width: 3)
+                                    ),
+                                    child: SizedBox(
+                                      height: 70,
+                                      width: 70,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(Radius.circular(45)),
+                                        child: Image(
+                                          image: AssetImage(avatarUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5,),
+                                  Text("小王")
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    )
+                  ],
+                )
+              ),
+              //第三个卡片，一天时间
+              Card(
+                margin: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.fromLTRB(20, 5, 20, 10),
+                      child: Font16("今天"),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(20, 5, 20, 10),
+                      child: Column(
+                        children: <Widget>[
+                          RadiusLinearProcess(
+                            value: minutes/1440,
+                            height: 20,
+                            width: width-80,
+                            frColor: MyColors.orange,
+                            bgColor: Colors.white,
+                          ),
+                          SizedBox(height: 15,),
+                          //时间轴
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisSize: MainAxisSize.max,
+                            children: <Widget>[
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("0")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("2")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("4")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("6")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("8")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("10")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("12")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("14")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("16")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("18")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("20")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("22")],),flex: 1,),
+                              Expanded(child: Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[Text("24")],),flex: 1,),
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                )
+              ),
+              Row(
+                children: <Widget>[
+                  //第四个卡片，完成度
+                  Card(
+                    margin: EdgeInsets.fromLTRB(10, 5, 5, 10),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    child: Container(
+                      width: (width-70)/2,
+                      height: (width-70)/2,
+                      margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 0, 0, 10),
+                            child: Font16("本周 - 完成度")
+                          ),
+                          Expanded(
+                            child: Center(
+                              child: Container(
+                                child: CircularPercentIndicator(
+                                  radius: 120.0,
+                                  lineWidth: 15.0,
+                                  animation: true,
+                                  percent: finishedMission/totalMission,
+                                  center: Text(
+                                    (finishedMission/totalMission*100).toStringAsFixed(1) + "%",
+                                    style: TextStyle(
+                                      fontFamily: "Microsoft YaHei",
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: MyColors.orange
+                                    ),
+                                  ),
+                                  circularStrokeCap: CircularStrokeCap.round,
+                                  progressColor: MyColors.orange,
+                                  backgroundColor: MyColors.lightGrey,
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      )
+                    )
                   ),
+                  //第五个卡片，柱状图
+                  Card(
+                    margin: EdgeInsets.fromLTRB(5, 5, 10, 10),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                    child: Container(
+                      width: (width-70)/2,
+                      height: (width-70)/2,
+                      margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                              margin: EdgeInsets.fromLTRB(10,0,0,10),
+                              child: Font16("本周 - 时间")
+                          ),
+                          Container(
+                            child: Center(
+                              child: Container(
+                                child: WeeklyBarCharts(
+                                  dayTime,
+                                  width: (width-90)/2,
+                                  height: (width-140)/2,
+                                  barWidth: 13,
+                                  tooltipBgColor: MyColors.grey,
+                                )
+                              )
+                            ),
+                          )
+                        ],
+                      )
+                    )
+                  ),
+                ],
+              ),
+              //第六个卡片，月时间
+              Card(
+                  margin: EdgeInsets.fromLTRB(10, 5, 10, 10),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                   child: Column(
                     children: <Widget>[
-                      Text("用户名"),
-                      Text("注册时间"),
-                      Text("宠物名称"),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Font16("本月"),
+                            Container(
+                              margin: EdgeInsets.symmetric(vertical: 5),
+                              width: 200,
+                              height: 25,
+                              child: TabBar(
+                                isScrollable: true,
+                                labelColor: Colors.white,
+                                unselectedLabelColor: Colors.black,
+                                controller: this._monthTabController,
+                                indicator: BoxDecoration(
+                                  color: MyColors.deepOrange,
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
+                                tabs: tagTabs,
+                              ),
+                            )
+                          ],
+                        )
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        height: width/3,
+                        child: TabBarView(
+                          controller: this._monthTabController,
+                          children: getLineCharts(tagTabs.length-1,width-60)
+                        ),
+                      )
                     ],
                   )
-                ),
               ),
-              Divider(thickness: 1,),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                      minHeight: 200,
-                      maxHeight: 200
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    child: Center(
-                      child: Text("学习时长显示区域"),
-                    ),
-                  ),
-                ),
-              ),
-              Divider(thickness: 1,),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                      minHeight: 200,
-                      maxHeight: 200
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    child: Center(
-                      child: Text("标签计时显示区域"),
-                    ),
-                  ),
-                ),
-              ),
-              Divider(thickness: 1,),
-              SizedBox(
-                height: 30,
-                child: InkWell(
-                  child: Text("相册目录"),
-                  onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                      return MemoriesOverviewPage();
-                    }));
-                  },
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minHeight: 200,
-                    maxHeight: 200,
-                    minWidth: (width.ceil()-40)/1,
-                  ),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(20))
-                    ),
-                    child: Stack(
-                      children: <Widget>[
-                        PageView.builder(
-                          controller: _pageController,
-                          itemBuilder: (context,index){
-                            Matrix4 matrix4 = Matrix4.identity();
-                            if (index == _currPageValue.floor()) {
-                              //当前的item
-                              var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
-                              var currTrans = _height * (1 - currScale) / 2;
-
-                              matrix4 = Matrix4.diagonal3Values(1.0, currScale, 1.0)
-                                ..setTranslationRaw(0.0, currTrans, 0.0);
-                            } else if (index == _currPageValue.floor() + 1) {
-                              //右边的item
-                              var currScale =
-                                  _scaleFactor + (_currPageValue - index + 1) * (1 - _scaleFactor);
-                              var currTrans = _height * (1 - currScale) / 2;
-
-                              matrix4 = Matrix4.diagonal3Values(1.0, currScale, 1.0)
-                                ..setTranslationRaw(0.0, currTrans, 0.0);
-                            } else if (index == _currPageValue.floor() - 1) {
-                              //左边
-                              var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
-                              var currTrans = _height * (1 - currScale) / 2;
-
-                              matrix4 = Matrix4.diagonal3Values(1.0, currScale, 1.0)
-                                ..setTranslationRaw(0.0, currTrans, 0.0);
-                            } else {
-                              //其他，不在屏幕显示的item
-                              matrix4 = Matrix4.diagonal3Values(1.0, _scaleFactor, 1.0)
-                                ..setTranslationRaw(0.0, _height * (1 - _scaleFactor) / 2, 0.0);
-                            }
-
-                            if(memory[index] == "##locked##"){
-                              return Transform(
-                                transform: matrix4,
-                                child: Container(
-                                  color: Colors.blue,
-                                  child: Center(
-                                    child: Text("Locked",style: TextStyle(fontSize: 45,color: Colors.white),),
+              //第七个卡片，年时间
+              Card(
+                  margin: EdgeInsets.fromLTRB(10, 5, 10, 20),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                          margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Font16("今年"),
+                              Container(
+                                margin: EdgeInsets.symmetric(vertical: 5),
+                                width: 200,
+                                height: 25,
+                                child: TabBar(
+                                  isScrollable: true,
+                                  labelColor: Colors.white,
+                                  unselectedLabelColor: Colors.black,
+                                  controller: this._yearTabController,
+                                  indicator: BoxDecoration(
+                                    color: MyColors.deepOrange,
+                                    borderRadius: BorderRadius.circular(30),
                                   ),
+                                  tabs: tagTabs,
                                 ),
-                              );
-                            }
-
-                            else if(memory[index] == "##none##"){
-                              return Transform(
-                                transform: matrix4,
-                                child: Container(
-                                  color: Colors.grey,
-                                  child: Center(
-                                    child: Text("没有更多了~",style: TextStyle(fontSize: 35,color: Colors.white),),
-                                  ),
-                                ),
-                              );
-                            }
-
-                            else{
-                              return Transform(
-                                transform: matrix4,
-                                child: Container(
-                                  //margin: EdgeInsets.fromLTRB(30, 20, 30, 20),
-                                  child: SizedBox(
-                                    height: 160,
-                                    width: (width.ceil()-40)/3,
-                                    child: Image(image: AssetImage(memory[index % (memory.length-1)]),fit: BoxFit.cover,),
-                                  ),
-                                ),
-                              );
-                            }
-                          },
-                          itemCount: memory.length,
-                        )
-                      ],
-                    ),
-                  ),
-                ),
+                              )
+                            ],
+                          )
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        height: width/3,
+                        child: TabBarView(
+                            controller: this._yearTabController,
+                            children: getLineCharts(tagTabs.length-1,width-60)
+                        ),
+                      )
+                    ],
+                  )
               ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  /// 动态获取折线图
+  /// @param n:标签的个数
+  List<Widget> getLineCharts(int n, double width){
+    //"全部“标签不可少
+    List<Widget> lists = [
+      CustomLineChart(
+        times: _monthlyAllTime,
+        width: width,
+      )
+    ];
+    for(int i=0;i<n;i++){
+      lists.add(
+        CustomLineChart(
+          times: _tagTime[i],
+          width: width,
+        )
+      );
+    }
+    return lists;
+  }
+
+  /// 设置标签项
+  void setTagTabs(){
+    for(int i=0;i<tags.length;i++){
+      tagTabs.add(
+        Tab(text: tags[i],)
+      );
+    }
   }
 }

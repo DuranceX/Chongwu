@@ -54,6 +54,7 @@ class AddCustomCreditDialog extends StatelessWidget{
                         borderRadius: BorderRadius.all(Radius.circular(100)),
                       ),
                     ),
+                    keyboardType: TextInputType.number,
                   ),
                 )
               ],

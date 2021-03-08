@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     final menuWidth = width / 4;
     final menuHeight = width / 3.2;
     final menuPhotoHeight = width / 4;
+    final padding = MediaQuery.of(context).padding.top;
     return Scaffold(
       // appBar: AppBar(
       //   toolbarHeight: 50,
@@ -102,7 +103,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           TabBarView(
               controller: tabController,
               children: <Widget>[
-                ConstrainedBox(                                   //Learn页面的内容
+                //Learn页面的内容
+                ConstrainedBox(
                     constraints: BoxConstraints(
                       minWidth: double.infinity,
                     ),
@@ -117,7 +119,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       child: Text(_bodyStr1,textScaleFactor: 2.0,style: TextStyle(color: Colors.white),),
                     )
                 ),
-                ConstrainedBox(                                 //Play页面的内容
+                //Play页面的内容
+                ConstrainedBox(
                     constraints: BoxConstraints(
                       minWidth: double.infinity,
                     ),
@@ -155,7 +158,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                           Column(
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 75),
+                                margin: EdgeInsets.only(top: padding + 40),
                                 decoration: BoxDecoration(
                                     color: MyColors.orange,
                                     borderRadius: BorderRadius.circular(15),
@@ -209,7 +212,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -264,7 +267,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -319,7 +322,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -379,7 +382,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -434,7 +437,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )
@@ -489,7 +492,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                                                   child: ClipRRect(
                                                                       borderRadius: BorderRadius.all(Radius.circular(15)),
                                                                       child: Image(
-                                                                        image: AssetImage("res/images/background.jpg"),
+                                                                        image: AssetImage("res/images/dog.png"),
                                                                         fit: BoxFit.cover,
                                                                       )
                                                                   )

@@ -5,6 +5,8 @@ import 'package:chongwu/widget/BuyGoodsWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'SetItemWidget.dart';
+
 class BackpackItemWidget extends StatelessWidget{
 
   final String imageUrl;
@@ -51,7 +53,7 @@ class BackpackItemWidget extends StatelessWidget{
                           ),
                         ],
                       ),
-                      BuyGoodsWidget(
+                      SetItemWidget(
                         imageUrl: imageUrl,
                         imageText: imageText,
                         bought: bought,

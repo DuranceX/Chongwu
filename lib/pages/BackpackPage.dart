@@ -1,4 +1,3 @@
-import 'package:chongwu/pages/PhotoViewPage.dart';
 import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/MyTexts.dart';
@@ -62,6 +61,7 @@ class BackpackPageState extends State<BackpackPage> with SingleTickerProviderSta
           labelColor: Colors.white,
         ),
         actions: [
+          //鱼干
           Container(
               margin: EdgeInsets.fromLTRB(0, 5, 5, 5),
               decoration: BoxDecoration(
@@ -91,7 +91,9 @@ class BackpackPageState extends State<BackpackPage> with SingleTickerProviderSta
                     onTap: (){
                       showDialog(
                         context: context,
-                        child: AddCreditDialog(),
+                        builder: (context){
+                          return AddCreditDialog().build(context);
+                        },
                       );
                     },
                   )
@@ -327,16 +329,16 @@ class BackpackPageState extends State<BackpackPage> with SingleTickerProviderSta
     Future.delayed(Duration(milliseconds: 1000)).then((e){
       setState(() {
         clothesImages.insertAll(clothesImages.length-1, [
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
-          "res/images/111.jpg",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
+          "res/images/dog.png",
         ]);
         for(int i=0;i<10;i++) {
           clothesNames.addAll([
