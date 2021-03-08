@@ -1,4 +1,3 @@
-import 'package:chongwu/pages/PhotoViewPage.dart';
 import 'package:chongwu/values/MyColors.dart';
 import 'package:chongwu/values/MyIcons.dart';
 import 'package:chongwu/values/MyTexts.dart';

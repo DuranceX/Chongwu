@@ -11,7 +11,7 @@ class MinePage extends StatefulWidget{
   MinePageState createState() => MinePageState();
 }
 
-class MinePageState extends State<MinePage> with SingleTickerProviderStateMixin{
+class MinePageState extends State<MinePage> with TickerProviderStateMixin{
 
   int minutes;
   DateTime now;
@@ -21,12 +21,12 @@ class MinePageState extends State<MinePage> with SingleTickerProviderStateMixin{
   int totalMission = 17;
   String avatarUrl = "res/images/dog.png";
   TabController _monthTabController;
+  TabController _yearTabController;
 
   List<double> dayTime = [
     1, 1.5, 2.6, 3.8, 1.5, 2.3, 2.8
   ];
 
-  //最多5个自定义标签
   List<double> _monthlyAllTime = [1, 1.5, 2, 3.8, 1.5, 2.3, 2.8];
   List<List<double>> _tagTime = [];
 
@@ -53,6 +53,7 @@ class MinePageState extends State<MinePage> with SingleTickerProviderStateMixin{
     setTagTabs();
 
     _monthTabController = TabController(length: tagTabs.length, vsync: this);
+    _yearTabController = TabController(length: tagTabs.length, vsync: this);
   }
 
   @override
@@ -526,6 +527,48 @@ class MinePageState extends State<MinePage> with SingleTickerProviderStateMixin{
                         child: TabBarView(
                           controller: this._monthTabController,
                           children: getLineCharts(tagTabs.length-1,width-60)
+                        ),
+                      )
+                    ],
+                  )
+              ),
+              //第七个卡片，年时间
+              Card(
+                  margin: EdgeInsets.fromLTRB(10, 5, 10, 20),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                  child: Column(
+                    children: <Widget>[
+                      Container(
+                          margin: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Font16("今年"),
+                              Container(
+                                margin: EdgeInsets.symmetric(vertical: 5),
+                                width: 200,
+                                height: 25,
+                                child: TabBar(
+                                  isScrollable: true,
+                                  labelColor: Colors.white,
+                                  unselectedLabelColor: Colors.black,
+                                  controller: this._yearTabController,
+                                  indicator: BoxDecoration(
+                                    color: MyColors.deepOrange,
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                  tabs: tagTabs,
+                                ),
+                              )
+                            ],
+                          )
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        height: width/3,
+                        child: TabBarView(
+                            controller: this._yearTabController,
+                            children: getLineCharts(tagTabs.length-1,width-60)
                         ),
                       )
                     ],

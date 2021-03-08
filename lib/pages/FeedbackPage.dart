@@ -1,13 +1,8 @@
-import 'package:chongwu/Test/DioTestPage.dart';
 import 'package:chongwu/Test/MinePage.dart';
-import 'package:chongwu/widget/LineChartTest.dart';
-import 'ShopPage.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'DemoFlowPopMenu.dart';
 
 class FeedbackPage extends StatefulWidget{
   FeedbackPageState createState() => FeedbackPageState();
@@ -36,10 +31,6 @@ class FeedbackPageState extends State<FeedbackPage>{
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text("占位符",style: TextStyle(fontSize: 30),),
-                SizedBox(
-                  height: 200,
-                  child: DemoFlowPopMenu(),
-                ),
                 SizedBox(
                     height: 150,
                     width: width-40,
