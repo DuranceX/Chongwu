@@ -1,14 +1,19 @@
-import 'file:///E:/Work/Work_Android/Work_Android_Chongwu/lib/pages/MinePage.dart';
 import 'package:chongwu/Test/PopupMenuTestPage.dart';
 import 'package:chongwu/values/MyTexts.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'MinePage.dart';
 
 class FeedbackPage extends StatefulWidget{
   FeedbackPageState createState() => FeedbackPageState();
 }
 
 class FeedbackPageState extends State<FeedbackPage>{
+
+  String testStr="Test Output";
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -118,9 +123,94 @@ class FeedbackPageState extends State<FeedbackPage>{
                       ),
                     )
                 ),
+                SizedBox(height: 50,),
+                Row(
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () async {
+                        String temp = await _getData("http://47.114.76.8/api/login/1", {"username":"test2","password":"qwer1234"});
+                        setState((){
+                          testStr = temp;
+                        });
+                      },
+                      child: Text("登录成功"),
+                    ),
+                    RaisedButton(
+                      onPressed: () async {
+                        String temp = await _getData("http://47.114.76.8/api/login/1", {"username":"test452","password":"test1"});
+                        setState((){
+                          testStr = temp;
+                        });
+                      },
+                      child: Text("用户名未注册"),
+                    ),
+                    RaisedButton(
+                      onPressed: () async {
+                        String temp = await _getData("http://47.114.76.8/api/login/1", {"username":"test2","password":"test1"});
+                        setState((){
+                          testStr = temp;
+                        });
+                      },
+                      child: Text("密码错误"),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    RaisedButton(
+                      onPressed: () async {
+                        String temp = await _getData("http://47.114.76.8/api/login/1", {"username":"test2","password":"test1"});
+                        setState((){
+                          testStr = temp;
+                        });
+                      },
+                      child: Text("DioTest04"),
+                    ),
+                    RaisedButton(
+                      onPressed: () async {
+                        String temp = await _getData("http://47.114.76.8/api/login/1", {"username":"test2","password":"test1"});
+                        setState((){
+                          testStr = temp;
+                        });
+                      },
+                      child: Text("DioTest05"),
+                    ),
+                    RaisedButton(
+                      onPressed: () async {
+                        String temp = await _getData("http://47.114.76.8/api/login/1", {"username":"test2","password":"test1"});
+                        setState((){
+                          testStr = temp;
+                        });
+                      },
+                      child: Text("DioTest06"),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10,),
+                Text(testStr)
               ]
           ),
         )
     );
   }
+}
+
+Future<String> _getData(String url ,dynamic data) async{
+  String Url = url;
+  try{
+    Response response = await Dio().post(Url,data:data);
+    return response.data.toString();
+  } on DioError catch(e){
+    if(e.response != null){
+      return e.response.data.toString();
+    }
+    else{
+      return e.message.toString();
+    }
+  }
+  // setState(() {
+  //   _list = json.decode(response.data.toString())['result'];
+  // });
+  // print(_list[0]["list"][0]["title"]);
+  // print(_list[0]["list"].length);
 }
